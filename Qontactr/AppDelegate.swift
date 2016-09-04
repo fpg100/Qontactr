@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import GoogleMobileAds
+import FirebaseAnalytics
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.configureWithApplicationID("ca-app-pub-7526118464921133~6520412802")
         return true
     }
 
