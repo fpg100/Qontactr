@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Scan View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Scan View Controller" id="BYZ-38-t0r" customClass="ScanViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,19 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bap-Rj-0c4" customClass="GADBannerView">
-                                <rect key="frame" x="140" y="550" width="320" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyo-BZ-mz8">
+                                <rect key="frame" x="0.0" y="472" width="600" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bap-Rj-0c4" customClass="GADBannerView">
+                                        <rect key="frame" x="140" y="78" width="320" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9jH-ew-haH"/>
+                                            <constraint firstAttribute="width" constant="320" id="Msk-34-aQn"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-NE-qCF">
+                                        <rect key="frame" x="264" y="40" width="72" height="30"/>
+                                        <state key="normal" title="Start Scan"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFx-UW-LoK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="4sO-4B-G5U"/>
-                                    <constraint firstAttribute="height" constant="50" id="ADZ-h2-oji"/>
+                                    <constraint firstItem="bap-Rj-0c4" firstAttribute="centerX" secondItem="Pyo-BZ-mz8" secondAttribute="centerX" id="6dG-YL-7L1"/>
+                                    <constraint firstItem="fPw-NE-qCF" firstAttribute="centerX" secondItem="Pyo-BZ-mz8" secondAttribute="centerX" id="6xe-Na-AIt"/>
+                                    <constraint firstAttribute="bottom" secondItem="bap-Rj-0c4" secondAttribute="bottom" id="9K5-JA-4DD"/>
+                                    <constraint firstItem="bap-Rj-0c4" firstAttribute="top" secondItem="fPw-NE-qCF" secondAttribute="bottom" constant="8" id="ahc-0d-d5i"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAN-gV-TXH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bap-Rj-0c4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QAa-pS-21g"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bap-Rj-0c4" secondAttribute="bottom" id="kH0-ls-M0Y"/>
+                            <constraint firstItem="gAN-gV-TXH" firstAttribute="leading" secondItem="Pyo-BZ-mz8" secondAttribute="leading" id="6T9-TU-X5b"/>
+                            <constraint firstItem="Pyo-BZ-mz8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9z9-QJ-ccR"/>
+                            <constraint firstItem="Pyo-BZ-mz8" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Eug-p9-Gmc"/>
+                            <constraint firstAttribute="trailing" secondItem="Pyo-BZ-mz8" secondAttribute="trailing" id="ZNd-dV-qUb"/>
+                            <constraint firstItem="Pyo-BZ-mz8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="452" id="bnZ-bR-R7M"/>
+                            <constraint firstItem="gAN-gV-TXH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dMk-rA-U7F"/>
+                            <constraint firstItem="gAN-gV-TXH" firstAttribute="trailing" secondItem="Pyo-BZ-mz8" secondAttribute="trailing" id="hma-Fh-3Kf"/>
+                            <constraint firstItem="gAN-gV-TXH" firstAttribute="bottom" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wFr-rH-WTq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zYh-IG-ytH"/>

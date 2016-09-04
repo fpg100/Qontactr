@@ -9,12 +9,20 @@
 import UIKit
 import GoogleMobileAds
 import AVFoundation
+import SwiftQRCode
 
-class HomeViewController: UIViewController, GADBannerViewDelegate, AVCaptureMetadataOutputObjectsDelegate {
+class ScanViewController: UIViewController, GADBannerViewDelegate, AVCaptureMetadataOutputObjectsDelegate {
 
     let data = Data.sharedInstance
     
+    @IBOutlet var cameraView: UIView!
     @IBOutlet var bannerView: GADBannerView!
+    
+    let scanner = QRCode()
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        scanner.startScan()
+    }
     
     
     override func viewDidLoad() {
@@ -27,7 +35,12 @@ class HomeViewController: UIViewController, GADBannerViewDelegate, AVCaptureMeta
         request.testDevices = data.testDevices
         bannerView.loadRequest(request)
         
-
+        scanner.prepareScan(view) { (stringValue) -> () in
+            print(stringValue)
+        }
+        scanner.scanFrame = view.bounds
         
     }
+    
+    
 }

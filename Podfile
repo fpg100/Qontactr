@@ -6,6 +6,8 @@ target 'Qontactr' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'SwiftyJSON'
+  pod 'SwiftQRCode'
+
   # Pods for Qontactr
 
   target 'QontactrTests' do

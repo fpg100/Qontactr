@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftQRCode.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B295B87D2577EAF80AB002862F66B57</key>
+		<key>48BD267E55C5C2A0BCD0390561D673AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>952A8303DE0314D8AC358E5CC3E2BB93</key>
+		<key>65A02733C6B3FED7A4F8EAC20CBEDF8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C09444A1D0919C2F9C068FD21CBA5FD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6E02BDA12A341E4A96309E9D3E64F54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
