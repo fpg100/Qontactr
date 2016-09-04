@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D952F6A6646F8EF34213587 /* Pods_Qontactr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF67DEAEC9F5F6D7D3C8D0A /* Pods_Qontactr.framework */; };
 		5268D3DE1D7CD1D30071CD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3DD1D7CD1D30071CD56 /* AppDelegate.swift */; };
 		5268D3E01D7CD1D30071CD56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3DF1D7CD1D30071CD56 /* ViewController.swift */; };
 		5268D3E31D7CD1D30071CD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E11D7CD1D30071CD56 /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		5268D3E81D7CD1D30071CD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E61D7CD1D30071CD56 /* LaunchScreen.storyboard */; };
 		5268D3F31D7CD1D30071CD56 /* QontactrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3F21D7CD1D30071CD56 /* QontactrTests.swift */; };
 		5268D3FE1D7CD1D30071CD56 /* QontactrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3FD1D7CD1D30071CD56 /* QontactrUITests.swift */; };
+		52B488E91D7CD87C00015A9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */; };
+		A115044304022A07224CACF8 /* Pods_QontactrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6431977788268AF9C2036 /* Pods_QontactrUITests.framework */; };
+		A9E65EB9C857241D58A427C9 /* Pods_QontactrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42FCB54FBACBE1DD060E69 /* Pods_QontactrTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09876F0AEE170B1A1AE5B29C /* Pods-QontactrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrTests/Pods-QontactrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5268D3DA1D7CD1D30071CD56 /* Qontactr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qontactr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268D3DD1D7CD1D30071CD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5268D3DF1D7CD1D30071CD56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,15 @@
 		5268D3F91D7CD1D30071CD56 /* QontactrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268D3FD1D7CD1D30071CD56 /* QontactrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QontactrUITests.swift; sourceTree = "<group>"; };
 		5268D3FF1D7CD1D30071CD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5C2DB87FD17D4EB15950598F /* Pods-QontactrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrUITests/Pods-QontactrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CF67DEAEC9F5F6D7D3C8D0A /* Pods_Qontactr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qontactr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		609528FAB6F5776832D08B66 /* Pods-Qontactr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qontactr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr.debug.xcconfig"; sourceTree = "<group>"; };
+		96E6431977788268AF9C2036 /* Pods_QontactrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QontactrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD42FCB54FBACBE1DD060E69 /* Pods_QontactrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QontactrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D756580711DF5B3CAA81FEEF /* Pods-QontactrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrUITests/Pods-QontactrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DFDA76638E8981543EB779B2 /* Pods-Qontactr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qontactr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr.release.xcconfig"; sourceTree = "<group>"; };
+		F6AE8323E3FCEC83C05469B3 /* Pods-QontactrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrTests/Pods-QontactrTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D952F6A6646F8EF34213587 /* Pods_Qontactr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9E65EB9C857241D58A427C9 /* Pods_QontactrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A115044304022A07224CACF8 /* Pods_QontactrUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +94,13 @@
 		5268D3D11D7CD1D30071CD56 = {
 			isa = PBXGroup;
 			children = (
+				52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */,
 				5268D3DC1D7CD1D30071CD56 /* Qontactr */,
 				5268D3F11D7CD1D30071CD56 /* QontactrTests */,
 				5268D3FC1D7CD1D30071CD56 /* QontactrUITests */,
 				5268D3DB1D7CD1D30071CD56 /* Products */,
+				7241709123C6175762D5D2A3 /* Pods */,
+				F895D2A9293B5FD83D04BEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +145,29 @@
 			path = QontactrUITests;
 			sourceTree = "<group>";
 		};
+		7241709123C6175762D5D2A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				609528FAB6F5776832D08B66 /* Pods-Qontactr.debug.xcconfig */,
+				DFDA76638E8981543EB779B2 /* Pods-Qontactr.release.xcconfig */,
+				09876F0AEE170B1A1AE5B29C /* Pods-QontactrTests.debug.xcconfig */,
+				F6AE8323E3FCEC83C05469B3 /* Pods-QontactrTests.release.xcconfig */,
+				5C2DB87FD17D4EB15950598F /* Pods-QontactrUITests.debug.xcconfig */,
+				D756580711DF5B3CAA81FEEF /* Pods-QontactrUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F895D2A9293B5FD83D04BEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CF67DEAEC9F5F6D7D3C8D0A /* Pods_Qontactr.framework */,
+				AD42FCB54FBACBE1DD060E69 /* Pods_QontactrTests.framework */,
+				96E6431977788268AF9C2036 /* Pods_QontactrUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5268D4021D7CD1D30071CD56 /* Build configuration list for PBXNativeTarget "Qontactr" */;
 			buildPhases = (
+				29883393A4FAEF10BB50743F /* [CP] Check Pods Manifest.lock */,
 				5268D3D61D7CD1D30071CD56 /* Sources */,
 				5268D3D71D7CD1D30071CD56 /* Frameworks */,
 				5268D3D81D7CD1D30071CD56 /* Resources */,
+				E778A6CAB123CBAA0EBF8452 /* [CP] Embed Pods Frameworks */,
+				A950B75577CC52FFB7221CED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5268D4051D7CD1D30071CD56 /* Build configuration list for PBXNativeTarget "QontactrTests" */;
 			buildPhases = (
+				5E80017ADC784DE1F64F41E8 /* [CP] Check Pods Manifest.lock */,
 				5268D3EA1D7CD1D30071CD56 /* Sources */,
 				5268D3EB1D7CD1D30071CD56 /* Frameworks */,
 				5268D3EC1D7CD1D30071CD56 /* Resources */,
+				FC3553682443DDE8124FA743 /* [CP] Embed Pods Frameworks */,
+				255081EED4727E09AAFED02C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5268D4081D7CD1D30071CD56 /* Build configuration list for PBXNativeTarget "QontactrUITests" */;
 			buildPhases = (
+				3DDADF47635FF2968090AB6C /* [CP] Check Pods Manifest.lock */,
 				5268D3F51D7CD1D30071CD56 /* Sources */,
 				5268D3F61D7CD1D30071CD56 /* Frameworks */,
 				5268D3F71D7CD1D30071CD56 /* Resources */,
+				2B1A87958A5B8361EB1C1547 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +283,7 @@
 				5268D3E81D7CD1D30071CD56 /* LaunchScreen.storyboard in Resources */,
 				5268D3E51D7CD1D30071CD56 /* Assets.xcassets in Resources */,
 				5268D3E31D7CD1D30071CD56 /* Main.storyboard in Resources */,
+				52B488E91D7CD87C00015A9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +302,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		255081EED4727E09AAFED02C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QontactrTests/Pods-QontactrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29883393A4FAEF10BB50743F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2B1A87958A5B8361EB1C1547 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QontactrUITests/Pods-QontactrUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DDADF47635FF2968090AB6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E80017ADC784DE1F64F41E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A950B75577CC52FFB7221CED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E778A6CAB123CBAA0EBF8452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3553682443DDE8124FA743 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QontactrTests/Pods-QontactrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5268D3D61D7CD1D30071CD56 /* Sources */ = {
@@ -397,6 +572,7 @@
 		};
 		5268D4031D7CD1D30071CD56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609528FAB6F5776832D08B66 /* Pods-Qontactr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Qontactr/Info.plist;
@@ -408,6 +584,7 @@
 		};
 		5268D4041D7CD1D30071CD56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFDA76638E8981543EB779B2 /* Pods-Qontactr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Qontactr/Info.plist;
@@ -419,6 +596,7 @@
 		};
 		5268D4061D7CD1D30071CD56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09876F0AEE170B1A1AE5B29C /* Pods-QontactrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QontactrTests/Info.plist;
@@ -431,6 +609,7 @@
 		};
 		5268D4071D7CD1D30071CD56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6AE8323E3FCEC83C05469B3 /* Pods-QontactrTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = QontactrTests/Info.plist;
@@ -443,6 +622,7 @@
 		};
 		5268D4091D7CD1D30071CD56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2DB87FD17D4EB15950598F /* Pods-QontactrUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = QontactrUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +634,7 @@
 		};
 		5268D40A1D7CD1D30071CD56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D756580711DF5B3CAA81FEEF /* Pods-QontactrUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = QontactrUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +663,7 @@
 				5268D4041D7CD1D30071CD56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5268D4051D7CD1D30071CD56 /* Build configuration list for PBXNativeTarget "QontactrTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +672,7 @@
 				5268D4071D7CD1D30071CD56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5268D4081D7CD1D30071CD56 /* Build configuration list for PBXNativeTarget "QontactrUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +681,7 @@
 				5268D40A1D7CD1D30071CD56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module Pods_Qontactr {
+  umbrella header "Pods-Qontactr-umbrella.h"
+
+  export *
+  module * { export * }
+}
