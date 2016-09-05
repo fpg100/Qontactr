@@ -21,6 +21,7 @@
 		52B488F21D7CECE700015A9A /* QRGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */; };
 		52B488F41D7D00BE00015A9A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488F31D7D00BE00015A9A /* HomeViewController.swift */; };
 		52B488F61D7D0D0000015A9A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488F51D7D0CFF00015A9A /* ContactsTableViewController.swift */; };
+		52B488F91D7D272100015A9A /* DOGE.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B488F81D7D272100015A9A /* DOGE.png */; };
 		A115044304022A07224CACF8 /* Pods_QontactrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6431977788268AF9C2036 /* Pods_QontactrUITests.framework */; };
 		A9E65EB9C857241D58A427C9 /* Pods_QontactrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42FCB54FBACBE1DD060E69 /* Pods_QontactrTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGeneratorViewController.swift; sourceTree = "<group>"; };
 		52B488F31D7D00BE00015A9A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B488F51D7D0CFF00015A9A /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		52B488F81D7D272100015A9A /* DOGE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DOGE.png; sourceTree = "<group>"; };
 		5C2DB87FD17D4EB15950598F /* Pods-QontactrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrUITests/Pods-QontactrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CF67DEAEC9F5F6D7D3C8D0A /* Pods_Qontactr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qontactr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609528FAB6F5776832D08B66 /* Pods-Qontactr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qontactr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		5268D3D11D7CD1D30071CD56 = {
 			isa = PBXGroup;
 			children = (
+				52B488F71D7D26F200015A9A /* images */,
 				52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */,
 				52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */,
 				5268D3DC1D7CD1D30071CD56 /* Qontactr */,
@@ -159,6 +162,14 @@
 				5268D3FF1D7CD1D30071CD56 /* Info.plist */,
 			);
 			path = QontactrUITests;
+			sourceTree = "<group>";
+		};
+		52B488F71D7D26F200015A9A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				52B488F81D7D272100015A9A /* DOGE.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		7241709123C6175762D5D2A3 /* Pods */ = {
@@ -298,6 +309,7 @@
 			files = (
 				5268D3E81D7CD1D30071CD56 /* LaunchScreen.storyboard in Resources */,
 				5268D3E51D7CD1D30071CD56 /* Assets.xcassets in Resources */,
+				52B488F91D7D272100015A9A /* DOGE.png in Resources */,
 				5268D3E31D7CD1D30071CD56 /* Main.storyboard in Resources */,
 				52B488E91D7CD87C00015A9A /* GoogleService-Info.plist in Resources */,
 			);

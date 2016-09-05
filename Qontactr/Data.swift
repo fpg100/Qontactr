@@ -73,7 +73,7 @@ class Data {
         newContact.givenName = first
         newContact.familyName = last
         
-        let cnPhoneNumber = CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: number))
+        let cnPhoneNumber = CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: number))
         newContact.phoneNumbers = [cnPhoneNumber]
         
         let store = CNContactStore()

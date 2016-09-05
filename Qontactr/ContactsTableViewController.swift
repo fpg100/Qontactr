@@ -40,7 +40,7 @@ class ContactsTableViewController: UITableViewController {
         contactsTable.delegate = self
         contactsTable.dataSource = self
         
-        print(data.contacts.count)
+        //print(data.contacts.count)
         contactsTable.reloadData()
     }
     
