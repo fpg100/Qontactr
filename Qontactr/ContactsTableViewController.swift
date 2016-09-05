@@ -9,39 +9,52 @@
 import UIKit
 import Contacts
 
-class ContactsTableViewController: UITableViewController {
+class ContactsTableViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
 
     let data = Data.sharedInstance
     
     @IBOutlet var contactsTable: UITableView!
 
-    
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //number of rows is number of contacts
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.contacts.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell!
-        
+    //whats in the cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel!.text = data.contacts[indexPath.row].givenName + " " + data.contacts[indexPath.row].familyName
-        
         return cell
+        
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    //tap a row
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         data.selectedContact = indexPath.row
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    //this function alows me to do slide-out things, even with no code
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        let defaultAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Default Contact", handler: {(action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+            
+            self.data.assignDefaultContact(self.data.contacts[indexPath.row])
+            
+        })
+        return [defaultAction]
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactsTable.delegate = self
-        contactsTable.dataSource = self
-        
-        //print(data.contacts.count)
-        contactsTable.reloadData()
+
     }
     
     override func viewDidAppear(animated: Bool) {

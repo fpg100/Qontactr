@@ -14,6 +14,8 @@ class Data {
     
     static let sharedInstance = Data()
     init(){}
+    
+    var defaultContact = CNContact()
 
     var selectedContact = 0
     
@@ -64,6 +66,38 @@ class Data {
         
         return results
     }()
+    
+    func assignDefaultContact(contact: CNContact) {
+    
+        
+        let first = contact.givenName
+        let last = contact.familyName
+        let phoneNumber = contact.phoneNumbers[0].value as! CNPhoneNumber
+        let number = phoneNumber.stringValue
+        var imageData = NSData()
+        
+        //default image
+        if let imageDataLocal = contact.thumbnailImageData {
+            imageData = imageDataLocal
+        } else if let imageDataLocal = contact.imageData {
+            imageData = imageDataLocal
+        }
+    
+        
+        NSUserDefaults.standardUserDefaults().setObject(first, forKey: "defaultFirst")
+        NSUserDefaults.standardUserDefaults().setObject(last, forKey: "defaultLast")
+        NSUserDefaults.standardUserDefaults().setObject(number, forKey: "defaultNumber")
+        NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "defaultImageData")
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+        defaultContact = contact
+        
+        
+        print(defaultContact.givenName + " " + defaultContact.familyName + " is now the Default Contact")
+        
+    }
+    
+    
 
     
     //creates a contact with the provided values
