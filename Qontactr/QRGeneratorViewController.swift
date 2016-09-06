@@ -28,6 +28,9 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
     
+    //main scroll view that contains everything
+    @IBOutlet var elderScroll: UIScrollView!
+    
     //runs when user taps anywhere
     @IBAction func tapAnywhere(sender: UITapGestureRecognizer) {
         //close keyboard
@@ -50,6 +53,9 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     }
     
     @IBAction func setDefaultContactButton(sender: UIButton) {
+        
+        print("Default Contact Button Pressed! Adding Default Contact.")
+        
         let defaultContact = CNMutableContact()
         defaultContact.givenName = nameField.text!
         defaultContact.familyName = lastField.text!
@@ -57,9 +63,6 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
 
         let completedContact: CNContact = defaultContact
         data.assignDefaultContact(completedContact)
-        
-        print("Default Contact Button Pressed! Adding Default Contact.")
-        
     }
     //creates a QR code based upon the data in the form
     func createQR() {
@@ -95,6 +98,23 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
         lastField.text = contact.familyName
         numberField.text = phoneNumber.stringValue
     }
+    
+    //text field methods for positioning and whatnot
+    
+    //runs when you begin editing
+    func textFieldDidBeginEditing(textField: UITextField) {
+        elderScroll.setContentOffset(CGPointMake(0, 60), animated: true)
+    }
+    
+    //allows enter to close the text field
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+            elderScroll.setContentOffset(CGPointMake(0, 0), animated: true)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

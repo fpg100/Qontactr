@@ -45,7 +45,18 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate,UITable
         
         let defaultAction = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Default Contact", handler: {(action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             
-            self.data.assignDefaultContact(self.data.contacts[indexPath.row])
+            let newDefaultContact = CNMutableContact()
+            newDefaultContact.givenName = self.data.contacts[indexPath.row].givenName
+            newDefaultContact.familyName = self.data.contacts[indexPath.row].familyName
+            newDefaultContact.phoneNumbers = self.data.contacts[indexPath.row].phoneNumbers
+            
+            let newCompletedDefaultContact: CNContact = newDefaultContact
+            
+            self.data.assignDefaultContact(newCompletedDefaultContact)
+            
+            self.data.selectedContact = indexPath.row
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
             
         })
         return [defaultAction]
