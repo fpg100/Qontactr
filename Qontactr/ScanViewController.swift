@@ -58,7 +58,7 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
     func presentAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message:
             message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default,handler: nil))
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
         
         
         self.presentViewController(alertController, animated: true, completion: nil)
@@ -121,7 +121,7 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         //start the scan by default
-        data.didComeFromTable = true
+        data.didComeFromTable = false
         scanner.startScan()
     }
     

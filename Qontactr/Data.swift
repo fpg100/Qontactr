@@ -94,9 +94,7 @@ class Data {
             let encodedImageData = UIImagePNGRepresentation(UIImage(data: imageDataLocal)!)
             imageData = NSKeyedArchiver.archivedDataWithRootObject(encodedImageData!)
             
-            
-            
-        } else if let imageDataLocal = contact.imageData {
+        } else if let imageDataLocal = contact.imageData{
             
             print("Attempted Default contact has imageData, attempting to archive it...")
             
@@ -105,7 +103,7 @@ class Data {
             
             let encodedImageData = UIImagePNGRepresentation(UIImage(data: imageDataLocal)!)
             imageData = NSKeyedArchiver.archivedDataWithRootObject(encodedImageData!)
-            
+ 
         } else {
             
             print("Attempted Default contact has no image data, attempting to archive default image...")
