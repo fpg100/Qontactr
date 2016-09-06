@@ -15,8 +15,13 @@ class Data {
     static let sharedInstance = Data()
     init(){}
     
+    //bool that tells the main VC if the segue was from the table vc or not
+    var didComeFromTable: Bool = false
+    
+    //default contact, gets imported at startup
     var defaultContact = CNContact()
 
+    //equivalent of the selected cell in the conacts table VC
     var selectedContact = 0
     
     let testDevices: [AnyObject] = ["a602ccfafd871943181aea6dc7401ddf",kGADSimulatorID]
@@ -68,19 +73,49 @@ class Data {
     }()
     
     func assignDefaultContact(contact: CNContact) {
-    
         
         let first = contact.givenName
         let last = contact.familyName
         let phoneNumber = contact.phoneNumbers[0].value as! CNPhoneNumber
         let number = phoneNumber.stringValue
+        
+        print("Attempting to assign \(first) \(last) as default contact")
+        
         var imageData = NSData()
         
         //default image
         if let imageDataLocal = contact.thumbnailImageData {
-            imageData = imageDataLocal
+            
+            print("Attempted Default contact has thumbnail image data, attempting to archive it...")
+            
+            let attemptedImage: UIImage = UIImage(data: imageDataLocal)!
+            print(attemptedImage)
+            
+            let encodedImageData = UIImagePNGRepresentation(UIImage(data: imageDataLocal)!)
+            imageData = NSKeyedArchiver.archivedDataWithRootObject(encodedImageData!)
+            
+            
+            
         } else if let imageDataLocal = contact.imageData {
-            imageData = imageDataLocal
+            
+            print("Attempted Default contact has imageData, attempting to archive it...")
+            
+            let attemptedImage: UIImage = UIImage(data: imageDataLocal)!
+            print(attemptedImage)
+            
+            let encodedImageData = UIImagePNGRepresentation(UIImage(data: imageDataLocal)!)
+            imageData = NSKeyedArchiver.archivedDataWithRootObject(encodedImageData!)
+            
+        } else {
+            
+            print("Attempted Default contact has no image data, attempting to archive default image...")
+            
+            let attemptedImage: UIImage = UIImage(named: "DOGE")!
+            print(attemptedImage)
+            
+            let encodedImageData = UIImagePNGRepresentation(UIImage(named: "DOGE")!)
+            imageData = NSKeyedArchiver.archivedDataWithRootObject(encodedImageData!)
+            
         }
     
         

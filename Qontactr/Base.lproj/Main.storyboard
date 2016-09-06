@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817.5" y="1249.5"/>
+            <point key="canvasLocation" x="1805.5" y="1260.5"/>
         </scene>
         <!--Generator View Controller-->
         <scene sceneID="JtK-Ef-Puj">
@@ -255,7 +255,7 @@
                         <outlet property="numberField" destination="ZUm-0I-Nd7" id="DSb-7r-a0I"/>
                         <outlet property="qrImage" destination="Sc7-c2-xrZ" id="cG9-So-hEa"/>
                         <outlet property="toolbarView" destination="B3t-yI-5zl" id="P6e-Wo-ykP"/>
-                        <segue destination="TvK-eP-ou2" kind="show" identifier="contactSegue" action="showDetailViewController:sender:" id="ars-bL-vRP"/>
+                        <segue destination="TvK-eP-ou2" kind="presentation" identifier="contactSegue" id="ars-bL-vRP"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="scanSegue" id="yOW-OH-fsZ"/>
                     </connections>
                 </viewController>
@@ -323,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Aj-kv-gCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310.5" y="459.5"/>
+            <point key="canvasLocation" x="2324.5" y="451.5"/>
         </scene>
     </scenes>
     <resources>

@@ -36,6 +36,7 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate,UITable
     }
     
     
+    
     //this function alows me to do slide-out things, even with no code
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -49,6 +50,13 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate,UITable
             newDefaultContact.givenName = self.data.contacts[indexPath.row].givenName
             newDefaultContact.familyName = self.data.contacts[indexPath.row].familyName
             newDefaultContact.phoneNumbers = self.data.contacts[indexPath.row].phoneNumbers
+            
+            //handle images
+            if let imageDataLocal = self.data.contacts[indexPath.row].thumbnailImageData {
+                print("Attempting to archive image from Contacts Table, user \(newDefaultContact.givenName) \(newDefaultContact.familyName) has thumbnail data")
+                
+                newDefaultContact.imageData = imageDataLocal
+            }
             
             let newCompletedDefaultContact: CNContact = newDefaultContact
             
@@ -65,12 +73,12 @@ class ContactsTableViewController: UIViewController, UITableViewDelegate,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+        data.didComeFromTable = true
     }
 
 }
