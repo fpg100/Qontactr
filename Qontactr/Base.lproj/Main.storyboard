@@ -104,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-yI-5zl">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3t-yI-5zl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" red="0.89660257880000005" green="0.93202484409999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -250,9 +250,11 @@
                         <outlet property="bannerView" destination="96E-Qu-oOs" id="ChC-Nz-w6v"/>
                         <outlet property="elderScroll" destination="DGz-eW-DFj" id="9RJ-yT-aK0"/>
                         <outlet property="lastField" destination="6cY-Kp-U1s" id="qOj-ha-WfD"/>
+                        <outlet property="masterView" destination="y6v-I1-Ne5" id="lN9-nl-cQb"/>
                         <outlet property="nameField" destination="uaZ-SG-Xgv" id="ufo-Ap-pMG"/>
                         <outlet property="numberField" destination="ZUm-0I-Nd7" id="DSb-7r-a0I"/>
                         <outlet property="qrImage" destination="Sc7-c2-xrZ" id="cG9-So-hEa"/>
+                        <outlet property="toolbarView" destination="B3t-yI-5zl" id="P6e-Wo-ykP"/>
                         <segue destination="TvK-eP-ou2" kind="show" identifier="contactSegue" action="showDetailViewController:sender:" id="ars-bL-vRP"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="scanSegue" id="yOW-OH-fsZ"/>
                     </connections>
@@ -264,7 +266,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1817.5" y="459.5"/>
+            <point key="canvasLocation" x="1805.5" y="451.5"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="s9Y-Y4-O48">

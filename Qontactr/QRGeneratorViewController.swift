@@ -28,6 +28,12 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
     
+    //master View owned by the VC
+    @IBOutlet var masterView: UIView!
+    
+    //view that covers the toolbar
+    @IBOutlet var toolbarView: UIView!
+    
     //main scroll view that contains everything
     @IBOutlet var elderScroll: UIScrollView!
     
@@ -118,6 +124,9 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //brings the toolbar-covering view on top of the scroll view so that when it offsets the toolbar is still visible
+        masterView.bringSubviewToFront(toolbarView)
         
         if NSUserDefaults.standardUserDefaults().stringForKey("defaultFirst") == nil {
             print("No default contact, adding the first contact as the default")
