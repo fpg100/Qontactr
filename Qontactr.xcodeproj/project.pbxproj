@@ -12,8 +12,6 @@
 		5268D3E31D7CD1D30071CD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E11D7CD1D30071CD56 /* Main.storyboard */; };
 		5268D3E51D7CD1D30071CD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E41D7CD1D30071CD56 /* Assets.xcassets */; };
 		5268D3E81D7CD1D30071CD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E61D7CD1D30071CD56 /* LaunchScreen.storyboard */; };
-		5268D3F31D7CD1D30071CD56 /* QontactrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3F21D7CD1D30071CD56 /* QontactrTests.swift */; };
-		5268D3FE1D7CD1D30071CD56 /* QontactrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268D3FD1D7CD1D30071CD56 /* QontactrUITests.swift */; };
 		52B488E91D7CD87C00015A9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */; };
 		52B488EB1D7CD8E200015A9A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */; };
 		52B488ED1D7CD96B00015A9A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488EC1D7CD96B00015A9A /* Data.swift */; };
@@ -50,11 +48,7 @@
 		5268D3E71D7CD1D30071CD56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5268D3E91D7CD1D30071CD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5268D3EE1D7CD1D30071CD56 /* QontactrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5268D3F21D7CD1D30071CD56 /* QontactrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QontactrTests.swift; sourceTree = "<group>"; };
-		5268D3F41D7CD1D30071CD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5268D3F91D7CD1D30071CD56 /* QontactrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5268D3FD1D7CD1D30071CD56 /* QontactrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QontactrUITests.swift; sourceTree = "<group>"; };
-		5268D3FF1D7CD1D30071CD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		52B488EC1D7CD96B00015A9A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -106,8 +100,6 @@
 				52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */,
 				52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */,
 				5268D3DC1D7CD1D30071CD56 /* Qontactr */,
-				5268D3F11D7CD1D30071CD56 /* QontactrTests */,
-				5268D3FC1D7CD1D30071CD56 /* QontactrUITests */,
 				5268D3DB1D7CD1D30071CD56 /* Products */,
 				7241709123C6175762D5D2A3 /* Pods */,
 				F895D2A9293B5FD83D04BEC9 /* Frameworks */,
@@ -138,24 +130,6 @@
 				5268D3E91D7CD1D30071CD56 /* Info.plist */,
 			);
 			path = Qontactr;
-			sourceTree = "<group>";
-		};
-		5268D3F11D7CD1D30071CD56 /* QontactrTests */ = {
-			isa = PBXGroup;
-			children = (
-				5268D3F21D7CD1D30071CD56 /* QontactrTests.swift */,
-				5268D3F41D7CD1D30071CD56 /* Info.plist */,
-			);
-			path = QontactrTests;
-			sourceTree = "<group>";
-		};
-		5268D3FC1D7CD1D30071CD56 /* QontactrUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5268D3FD1D7CD1D30071CD56 /* QontactrUITests.swift */,
-				5268D3FF1D7CD1D30071CD56 /* Info.plist */,
-			);
-			path = QontactrUITests;
 			sourceTree = "<group>";
 		};
 		7241709123C6175762D5D2A3 /* Pods */ = {
@@ -258,13 +232,16 @@
 					5268D3D91D7CD1D30071CD56 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = XF2UJ6K9F2;
+						LastSwiftMigration = 0800;
 					};
 					5268D3ED1D7CD1D30071CD56 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5268D3D91D7CD1D30071CD56;
 					};
 					5268D3F81D7CD1D30071CD56 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5268D3D91D7CD1D30071CD56;
 					};
 				};
@@ -457,7 +434,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5268D3F31D7CD1D30071CD56 /* QontactrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5268D3FE1D7CD1D30071CD56 /* QontactrUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +579,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.Qontactr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -624,6 +600,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.Qontactr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -636,6 +613,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.QontactrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qontactr.app/Qontactr";
 			};
 			name = Debug;
@@ -649,6 +627,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.QontactrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Qontactr.app/Qontactr";
 			};
 			name = Release;
@@ -661,6 +640,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.QontactrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = Qontactr;
 			};
 			name = Debug;
@@ -673,6 +653,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cointrak.QontactrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = Qontactr;
 			};
 			name = Release;
