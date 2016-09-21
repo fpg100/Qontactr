@@ -126,7 +126,7 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
         
 
         //create the qr code and put in on the image view
-        qrImage.image = QRCode.generateImage(contactString, avatarImage: contactImage)
+        qrImage.image = QRCode.generateImage(contactString, avatarImage: contactImage, avatarScale: 0.3)
         
     }
     
