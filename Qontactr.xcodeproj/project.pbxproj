@@ -12,6 +12,8 @@
 		5268D3E31D7CD1D30071CD56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E11D7CD1D30071CD56 /* Main.storyboard */; };
 		5268D3E51D7CD1D30071CD56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E41D7CD1D30071CD56 /* Assets.xcassets */; };
 		5268D3E81D7CD1D30071CD56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5268D3E61D7CD1D30071CD56 /* LaunchScreen.storyboard */; };
+		52A3903E1DC14842001C071C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3903D1DC14842001C071C /* ProfileViewController.swift */; };
+		52A390401DC14D99001C071C /* Qard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3903F1DC14D99001C071C /* Qard.swift */; };
 		52B488E91D7CD87C00015A9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */; };
 		52B488EB1D7CD8E200015A9A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */; };
 		52B488ED1D7CD96B00015A9A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488EC1D7CD96B00015A9A /* Data.swift */; };
@@ -49,6 +51,8 @@
 		5268D3E91D7CD1D30071CD56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5268D3EE1D7CD1D30071CD56 /* QontactrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5268D3F91D7CD1D30071CD56 /* QontactrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QontactrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A3903D1DC14842001C071C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52A3903F1DC14D99001C071C /* Qard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Qard.swift; sourceTree = "<group>"; };
 		52B488E81D7CD87C00015A9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B488EA1D7CD8E200015A9A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		52B488EC1D7CD96B00015A9A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				5268D3DD1D7CD1D30071CD56 /* AppDelegate.swift */,
 				52B488EC1D7CD96B00015A9A /* Data.swift */,
 				5268D3E11D7CD1D30071CD56 /* Main.storyboard */,
+				52A3903F1DC14D99001C071C /* Qard.swift */,
+				52A3903D1DC14842001C071C /* ProfileViewController.swift */,
 				52B488F51D7D0CFF00015A9A /* ContactsTableViewController.swift */,
 				52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */,
 				52B488EE1D7CDA6100015A9A /* ScanViewController.swift */,
@@ -422,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A3903E1DC14842001C071C /* ProfileViewController.swift in Sources */,
+				52A390401DC14D99001C071C /* Qard.swift in Sources */,
 				52B488ED1D7CD96B00015A9A /* Data.swift in Sources */,
 				52B488F61D7D0D0000015A9A /* ContactsTableViewController.swift in Sources */,
 				5268D3DE1D7CD1D30071CD56 /* AppDelegate.swift in Sources */,

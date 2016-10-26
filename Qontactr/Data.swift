@@ -15,6 +15,8 @@ class Data {
     static let sharedInstance = Data()
     init(){}
     
+    var selectedQard: Qard = Qard(first: "Dank", last: "Memes")
+    
     //bool that tells the main VC if the segue was from the table vc or not
     var didComeFromTable: Bool = false
     

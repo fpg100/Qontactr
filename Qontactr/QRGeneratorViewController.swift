@@ -111,13 +111,14 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     }
     
     
-    //creates a QR code based upon the data in the form
+    //creates a QR code based upon the data passed to it
     func createQR(first: String, last: String, number: String, contactImage: UIImage) {
 
         //if there is data, make the image the new one, if not, then keep the default
         /*if let contactImageData = data.contacts[data.selectedContact].thumbnailImageData{
             contactImage = UIImage(data: contactImageData)!
         }*/
+        
         
         //creates json string from the data in the form and stores it for parsing later
         let contactString = "{" + data.jsonify("first",value: first) + data.jsonify("last", value: last) + data.jsonify("number", value: number) + "}"
