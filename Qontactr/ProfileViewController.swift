@@ -12,6 +12,8 @@ class ProfileViewController: UIViewController {
 
     let data = Data.sharedInstance
     
+    @IBOutlet var testImageView: UIImageView!
+    
     //linking textFields
     @IBOutlet var firstNameField: UITextField!
     @IBOutlet var lastNameField: UITextField!
@@ -71,9 +73,6 @@ class ProfileViewController: UIViewController {
         setStatuses(data.selectedQard)
         data.selectedQard.printStatuses()
     }
-
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +84,8 @@ class ProfileViewController: UIViewController {
         data.selectedQard.printStatuses()
         
         loadForm(data.selectedQard)
+        
+        testImageView.image = data.selectedQard.contactQR()
     }
     
     override func viewDidAppear(animated: Bool) {

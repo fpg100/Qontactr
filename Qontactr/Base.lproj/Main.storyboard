@@ -299,14 +299,19 @@
                                             <constraint firstAttribute="bottom" secondItem="RkS-q7-lE1" secondAttribute="bottom" constant="57" id="w9a-zp-ff0"/>
                                         </constraints>
                                     </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1DL-HI-5EC"/>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fIC-aL-y6k" firstAttribute="centerX" secondItem="EFh-GQ-6aN" secondAttribute="centerX" id="37k-Pw-gDm"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" constant="87" id="8e9-IS-eMG"/>
                                     <constraint firstItem="fIC-aL-y6k" firstAttribute="top" secondItem="EFh-GQ-6aN" secondAttribute="top" constant="211" id="hZj-GC-vCU"/>
                                     <constraint firstAttribute="trailing" secondItem="fIC-aL-y6k" secondAttribute="trailing" id="hx3-Tr-Dxk"/>
                                     <constraint firstAttribute="bottom" secondItem="fIC-aL-y6k" secondAttribute="bottom" id="iLC-Au-6qv"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="top" secondItem="EFh-GQ-6aN" secondAttribute="topMargin" id="j5R-HK-nVk"/>
                                     <constraint firstItem="fIC-aL-y6k" firstAttribute="width" secondItem="EFh-GQ-6aN" secondAttribute="width" id="mzA-zA-OAj"/>
                                     <constraint firstItem="fIC-aL-y6k" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" id="tzY-1o-3jY"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="centerX" secondItem="fIC-aL-y6k" secondAttribute="centerX" id="vXj-sA-DKN"/>
+                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="top" secondItem="1DL-HI-5EC" secondAttribute="bottom" constant="3" id="ycu-Kf-Dew"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -333,6 +338,7 @@
                         <outlet property="phoneNumberSwitch" destination="JbX-IM-1Yg" id="M5S-Kj-j8D"/>
                         <outlet property="snapchatField" destination="qDr-w0-I5c" id="nqT-jX-ryk"/>
                         <outlet property="snapchatSwitch" destination="o7N-1E-Oqr" id="6My-n2-El5"/>
+                        <outlet property="testImageView" destination="1DL-HI-5EC" id="cI7-x6-NoV"/>
                         <outlet property="twitterField" destination="NDC-aZ-KsV" id="cB0-bA-aF5"/>
                         <outlet property="twitterSwitch" destination="9oH-DZ-L4f" id="uPZ-f4-br3"/>
                     </connections>
