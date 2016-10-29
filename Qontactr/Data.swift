@@ -21,7 +21,9 @@ class Data {
     //save current myQards array to user defaults
     func saveQards(){
         
-        
+        let encodedQardArray = NSKeyedArchiver.archivedDataWithRootObject(myQards)
+        NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedQardArray")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
     }
     

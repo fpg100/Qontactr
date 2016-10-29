@@ -83,6 +83,8 @@ class ProfileViewController: UIViewController {
         qard.showWebsite = websiteSwitch.on
         
         qard.printStatuses()
+        
+        data.saveQards()
     }
     
     //one action for every switch
