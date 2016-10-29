@@ -19,6 +19,10 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
     //banner ad
     @IBOutlet var bannerView: GADBannerView!
     
+    @IBOutlet var defaultBanner: UIImageView!
+    
+    @IBOutlet var bottomView: UIView!
+    
     //qr scanner
     let scanner = QRCode()
     
@@ -50,6 +54,8 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        bottomView.bringSubviewToFront(bannerView)
         
         //ad stuff
         bannerView.adUnitID = "ca-app-pub-7526118464921133/7997146000"

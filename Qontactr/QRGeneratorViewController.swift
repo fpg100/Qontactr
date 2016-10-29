@@ -85,6 +85,11 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         data.myQards = decodedQardArray
         data.selectedQard = data.myQards[0]
     }
+    
+    @IBAction func qardListButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("qardListSegue", sender: UIButton.self)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
