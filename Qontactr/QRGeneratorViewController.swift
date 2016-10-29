@@ -23,21 +23,6 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
     
-    //master View owned by the VC
-    @IBOutlet var masterView: UIView!
-    
-    //view that covers the toolbar
-    @IBOutlet var toolbarView: UIView!
-    
-    //main scroll view that contains everything
-    @IBOutlet var elderScroll: UIScrollView!
-    
-    //runs when user taps anywhere
-    @IBAction func tapAnywhere(sender: UITapGestureRecognizer) {
-        //close keyboard
-        view.endEditing(true)
-    }
-    
     //saves whatever image is on qrimage imageview after alert prompt
     @IBAction func saveQRPhotoButton(sender: UIButton) {
         let alertController = UIAlertController(title: "Save QR code to camera roll?", message:
@@ -82,6 +67,7 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         
         qrImage.image = data.selectedQard.contactQR()
         
+        //bring the ad over the temp banner
         view.bringSubviewToFront(bannerView)
         
         //ad stuff
