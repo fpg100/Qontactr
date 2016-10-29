@@ -74,6 +74,9 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
             let encodedQardArray = NSKeyedArchiver.archivedDataWithRootObject(qardArray)
             NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedQardArray")
             NSUserDefaults.standardUserDefaults().synchronize()
+            
+            self.performSegueWithIdentifier("profileSegue", sender: nil)
+            presentAlert("Welcome To Qontactr", message: "This is your Qontact Qard, enter your info and select what you want to display in your QR code")
         }
         
         let encodedQardArray = NSUserDefaults.standardUserDefaults().objectForKey("encodedQardArray") as! NSData

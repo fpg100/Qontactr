@@ -22,6 +22,8 @@ class Qard: NSObject, NSCoding {
     var instagram: String = ""
     var website: String = ""
     
+    var profileImage: UIImage = UIImage(named: "twitterIcon")!
+    
     init(first: String, last: String){
         firstName = first
         lastName = last
@@ -70,6 +72,10 @@ class Qard: NSObject, NSCoding {
         coder.encodeBool(showFacebook, forKey: "showFacebook")
         coder.encodeBool(showInstagram, forKey: "showInstagram")
         coder.encodeBool(showWebsite, forKey: "showWebsite")
+        
+        //the image
+        let imageData = UIImagePNGRepresentation(profileImage)
+        coder.encodeObject(imageData, forKey: "imageData")
     }
     
         //decoder
@@ -80,9 +86,10 @@ class Qard: NSObject, NSCoding {
             let emailAddress = decoder.decodeObjectForKey("emailAddress") as? String,
             let twitter = decoder.decodeObjectForKey("twitter") as? String,
             let snapchat = decoder.decodeObjectForKey("snapchat") as? String,
-            let facebook = decoder.decodeObjectForKey("instagram") as? String,
-            let instagram = decoder.decodeObjectForKey("facebook") as? String,
-            let website = decoder.decodeObjectForKey("website") as? String
+            let facebook = decoder.decodeObjectForKey("facebook") as? String,
+            let instagram = decoder.decodeObjectForKey("instagram") as? String,
+            let website = decoder.decodeObjectForKey("website") as? String,
+            let imageData = decoder.decodeObjectForKey("imageData") as? NSData?
         else {
             return nil
         }
@@ -99,6 +106,8 @@ class Qard: NSObject, NSCoding {
         self.facebook = facebook
         self.instagram = instagram
         self.website = website
+        
+        self.profileImage = UIImage(data: imageData!)!
         
         self.showFirstName = decoder.decodeBoolForKey("showFirstName")
         self.showLastName = decoder.decodeBoolForKey("showLastName")
@@ -179,7 +188,7 @@ class Qard: NSObject, NSCoding {
         
         print(contactJsonString)
         
-        return QRCode.generateImage(contactJsonString, avatarImage: nil)!
+        return QRCode.generateImage(contactJsonString, avatarImage: profileImage)!
         
     }
 

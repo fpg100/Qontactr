@@ -33,6 +33,8 @@
 	<string>Main</string>
 	<key>NSCameraUsageDescription</key>
 	<string>To Scan QR Codes</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -34,6 +34,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet var instagramSwitch: UISwitch!
     @IBOutlet var websiteSwitch: UISwitch!
     
+    //image outlet
+    @IBOutlet var profileImageView: UIImageView!
+    
     //load info from a Qard object into the form
     func loadForm(qard: Qard) {
         //loading the text from the qard into the fields
@@ -57,6 +60,9 @@ class ProfileViewController: UIViewController {
         facebookSwitch.setOn(qard.showFacebook, animated: true)
         instagramSwitch.setOn(qard.showInstagram, animated: true)
         websiteSwitch.setOn(qard.showWebsite, animated: true)
+        
+        //set image to profile image of qard
+        profileImageView.image = qard.profileImage
     }
     
     func saveFormToQard(qard: Qard){
@@ -106,7 +112,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view loaded")
         
         loadForm(data.selectedQard)
 
