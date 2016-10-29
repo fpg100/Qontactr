@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftQRCode
 
-class Qard {
+class Qard: NSObject, NSCoding {
     
     var firstName: String
     var lastName: String
@@ -37,6 +37,83 @@ class Qard {
     var showFacebook: Bool = false
     var showInstagram: Bool = false
     var showWebsite: Bool = false
+    
+    //NSCoding Stuff------------------------------------------------------
+        //encoder
+    func encodeWithCoder(coder: NSCoder) {
+        /*
+        coder.encodeObject(self.title, forKey: "title")
+        coder.encodeObject(self.author, forKey: "author")
+        coder.encodeInt(Int32(self.pageCount), forKey: "pageCount")
+        coder.encodeObject(self.categories, forKey: "categories")
+        coder.encodeBool(self.available, forKey: "available")
+        */
+        
+        //all the strings
+        coder.encodeObject(firstName, forKey: "firstName")
+        coder.encodeObject(lastName, forKey: "lastName")
+        coder.encodeObject(phoneNumber, forKey: "phoneNumber")
+        coder.encodeObject(emailAddress, forKey: "emailAddress")
+        coder.encodeObject(twitter, forKey: "twitter")
+        coder.encodeObject(snapchat, forKey: "snapchat")
+        coder.encodeObject(facebook, forKey: "facebook")
+        coder.encodeObject(instagram, forKey: "instagram")
+        coder.encodeObject(website, forKey: "website")
+        
+        //all the bools
+        coder.encodeBool(showFirstName, forKey: "showFirstName")
+        coder.encodeBool(showLastName, forKey: "showLastName")
+        coder.encodeBool(showPhoneNumber, forKey: "showPhoneNumber")
+        coder.encodeBool(showEmailAddress, forKey: "showEmailAddress")
+        coder.encodeBool(showTwitter, forKey: "showTwitter")
+        coder.encodeBool(showSnapchat, forKey: "showSnapchat")
+        coder.encodeBool(showFacebook, forKey: "showFacebook")
+        coder.encodeBool(showInstagram, forKey: "showInstagram")
+        coder.encodeBool(showWebsite, forKey: "showWebsite")
+    }
+    
+        //decoder
+    required convenience init?(coder decoder: NSCoder) {
+        guard let firstName = decoder.decodeObjectForKey("firstName") as? String,
+            let lastName = decoder.decodeObjectForKey("lastName") as? String,
+            let phoneNumber = decoder.decodeObjectForKey("phoneNumber") as? String,
+            let emailAddress = decoder.decodeObjectForKey("emailAddress") as? String,
+            let twitter = decoder.decodeObjectForKey("twitter") as? String,
+            let snapchat = decoder.decodeObjectForKey("snapchat") as? String,
+            let facebook = decoder.decodeObjectForKey("instagram") as? String,
+            let instagram = decoder.decodeObjectForKey("facebook") as? String,
+            let website = decoder.decodeObjectForKey("website") as? String
+        else {
+            return nil
+        }
+        
+        self.init(
+            first: firstName,
+            last: lastName
+        )
+        
+        self.phoneNumber = phoneNumber
+        self.emailAddress = emailAddress
+        self.twitter = twitter
+        self.snapchat = snapchat
+        self.facebook = facebook
+        self.instagram = instagram
+        self.website = website
+        
+        self.showFirstName = decoder.decodeBoolForKey("showFirstName")
+        self.showLastName = decoder.decodeBoolForKey("showLastName")
+        self.showPhoneNumber = decoder.decodeBoolForKey("showPhoneNumber")
+        self.showEmailAddress = decoder.decodeBoolForKey("showEmailAddress")
+        self.showTwitter = decoder.decodeBoolForKey("showTwitter")
+        self.showSnapchat = decoder.decodeBoolForKey("showSnapchat")
+        self.showFacebook = decoder.decodeBoolForKey("showFacebook")
+        self.showInstagram = decoder.decodeBoolForKey("showInstagram")
+        self.showWebsite = decoder.decodeBoolForKey("showWebsite")
+        
+    }
+    
+    //--------------------------------------------------------------------
+    
     
     func printStatuses(){
         print("\n========================================================")

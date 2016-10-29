@@ -51,19 +51,43 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     @IBAction func profileSegueButton(sender: AnyObject) {
         self.performSegueWithIdentifier("profileSegue", sender: UIButton.self)
     }
+    
+    //present an alert to the user
+    func presentAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+        
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    //loads User Defaults from memory and handles them if there are none
+    func setupDefaults(){
+        let currentLaunchCount = NSUserDefaults.standardUserDefaults().integerForKey("launchCount")
+        print("The user has launched the app \(currentLaunchCount) times")
+        
+        //if this is the first time the user launches the app, make the stored qard array the default one
+        if currentLaunchCount == 1 {
+            print("First time launching app, making default Qard array...")
+            let qardArray: [Qard] = [data.selectedQard]
+            let encodedQardArray = NSKeyedArchiver.archivedDataWithRootObject(qardArray)
+            NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedQardArray")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
+        
+        let encodedQardArray = NSUserDefaults.standardUserDefaults().objectForKey("encodedQardArray") as! NSData
+        var decodedQardArray = NSKeyedUnarchiver.unarchiveObjectWithData(encodedQardArray) as! [Qard]
+        
+        data.myQards = decodedQardArray
+        data.selectedQard = data.myQards[0]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data.selectedQard = Qard(first: "John", last: "Chiaramonte")
-        data.selectedQard.phoneNumber = "9178463124"
-        data.selectedQard.emailAddress = "jchiaramonte18@regis.org"
-        data.selectedQard.twitter = "jchiaramonte_"
-        data.selectedQard.snapchat = "jc-17"
-        data.selectedQard.instagram = "jchiaramonte_"
-        data.selectedQard.facebook = "Testing"
-        data.selectedQard.website = "cointrak.me"
-        data.selectedQard.printStatuses()
+        setupDefaults()
+        
         
         qrImage.image = data.selectedQard.contactQR()
         

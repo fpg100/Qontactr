@@ -59,7 +59,19 @@ class ProfileViewController: UIViewController {
         websiteSwitch.setOn(qard.showWebsite, animated: true)
     }
     
-    func setStatuses(qard: Qard){
+    func saveFormToQard(qard: Qard){
+        //values set
+        qard.firstName = firstNameField.text!
+        qard.lastName = lastNameField.text!
+        qard.phoneNumber = phoneNumberField.text!
+        qard.emailAddress = emailField.text!
+        qard.twitter = twitterField.text!
+        qard.snapchat = snapchatField.text!
+        qard.facebook = facebookField.text!
+        qard.instagram = instagramField.text!
+        qard.website = websiteField.text!
+        
+        //bools set
         qard.showFirstName = firstNameSwitch.on
         qard.showLastName = lastNameSwitch.on
         qard.showPhoneNumber = phoneNumberSwitch.on
@@ -69,23 +81,31 @@ class ProfileViewController: UIViewController {
         qard.showFacebook = facebookSwitch.on
         qard.showInstagram = instagramSwitch.on
         qard.showWebsite = websiteSwitch.on
+        
+        qard.printStatuses()
     }
     
     //one action for every switch
     @IBAction func switchToggled(sender: AnyObject) {
-        setStatuses(data.selectedQard)
-        data.selectedQard.printStatuses()
+        saveFormToQard(data.selectedQard)
     }
 
     @IBAction func backButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func tapAnywhere(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func saveButton(sender: AnyObject) {
+        saveFormToQard(data.selectedQard)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("view loaded")
-                
+        
         loadForm(data.selectedQard)
 
     }
