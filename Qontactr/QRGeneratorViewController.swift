@@ -11,7 +11,7 @@ import SwiftQRCode
 import GoogleMobileAds
 import Contacts
 
-class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
+class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
 
     let data = Data.sharedInstance
     
@@ -19,11 +19,6 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     
     //image view that the QR code gets put onto
     @IBOutlet var qrImage: UIImageView!
-    
-    //form text field
-    @IBOutlet var nameField: UITextField!
-    @IBOutlet var lastField: UITextField!
-    @IBOutlet var numberField: UITextField!
     
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
@@ -43,6 +38,7 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
         view.endEditing(true)
     }
     
+    //saves whatever image is on qrimage imageview after alert prompt
     @IBAction func saveQRPhotoButton(sender: UIButton) {
         let alertController = UIAlertController(title: "Save QR code to camera roll?", message:
             nil, preferredStyle: UIAlertControllerStyle.Alert)
@@ -64,147 +60,29 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
     
     }
     
-    @IBAction func qrButton(sender: UIButton) {
-        //retrieve the phone number
+    @IBAction func scanSegueButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("scanSegue", sender: UIButton.self)
+    }
+    @IBAction func profileSegueButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("profileSegue", sender: UIButton.self)
+    }
 
-        var contactImage: UIImage = UIImage(named: "DOGE")!
-        
-        //if there is data, make the image the new one, if not, then keep the default
-        if let contactImageData = data.contacts[data.selectedContact].thumbnailImageData{
-            contactImage = UIImage(data: contactImageData)!
-        }
-        
-        
-        createQR(nameField.text!,last: lastField.text!,number: numberField.text!,contactImage: contactImage)
-    }
-    
-    //segue to scanner VC
-    @IBAction func scanButton(sender: UIButton) {
-        performSegueWithIdentifier("scanSegue", sender: UIButton.self)
-    }
-    
-    //segue to the contacts page
-    @IBAction func contactButton(sender: UIButton) {
-        performSegueWithIdentifier("contactSegue", sender: UIButton.self)
-    }
-    
-    @IBAction func setDefaultContactButton(sender: UIButton) {
-        
-        print("Default Contact Button Pressed! Adding Default Contact.")
-        
-        let defaultContact = CNMutableContact()
-        defaultContact.givenName = nameField.text!
-        defaultContact.familyName = lastField.text!
-        defaultContact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: numberField.text!))]
-
-        
-        //handle images
-        if let imageDataLocal = self.data.contacts[data.selectedContact].thumbnailImageData {
-            print("Attempting to archive image from Contacts Table, user \(defaultContact.givenName) \(defaultContact.familyName) has thumbnail data")
-            
-            defaultContact.imageData = imageDataLocal
-        }
-        
-        
-        let completedContact: CNContact = defaultContact
-        data.assignDefaultContact(completedContact)
-    }
-    
-    
-    //creates a QR code based upon the data passed to it
-    func createQR(first: String, last: String, number: String, contactImage: UIImage) {
-
-        //if there is data, make the image the new one, if not, then keep the default
-        /*if let contactImageData = data.contacts[data.selectedContact].thumbnailImageData{
-            contactImage = UIImage(data: contactImageData)!
-        }*/
-        
-        
-        //creates json string from the data in the form and stores it for parsing later
-        let contactString = "{" + data.jsonify("first",value: first) + data.jsonify("last", value: last) + data.jsonify("number", value: number) + "}"
-        
-        print("QR Generating with following data: " + contactString)
-        
-
-        //create the qr code and put in on the image view
-        qrImage.image = QRCode.generateImage(contactString, avatarImage: contactImage, avatarScale: 0.3)
-        
-    }
-    
-    //data.contacts[data.selectedContact]
-    
-    //loads the form with contact data from a passed CNContact
-    func loadTextFields(contact: CNContact){
-        //retrieve first phone number from that contact as a CNPhoneNumber object
-        let phoneNumber = contact.phoneNumbers[0].value as! CNPhoneNumber
-        
-        //fill in the forms
-        nameField.text = contact.givenName
-        lastField.text = contact.familyName
-        numberField.text = phoneNumber.stringValue
-    }
-    
-    //text field methods for positioning and whatnot
-    
-    //runs when you begin editing
-    func textFieldDidBeginEditing(textField: UITextField) {
-        elderScroll.setContentOffset(CGPointMake(0, 60), animated: true)
-    }
-    
-    //allows enter to close the text field
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-            elderScroll.setContentOffset(CGPointMake(0, 0), animated: true)
-        }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //brings the toolbar-covering view on top of the scroll view so that when it offsets the toolbar is still visible
-        masterView.bringSubviewToFront(toolbarView)
+        data.selectedQard = Qard(first: "John", last: "Chiaramonte")
+        data.selectedQard.phoneNumber = "9178463124"
+        data.selectedQard.emailAddress = "jchiaramonte18@regis.org"
+        data.selectedQard.twitter = "jchiaramonte_"
+        data.selectedQard.snapchat = "jc-17"
+        data.selectedQard.instagram = "jchiaramonte_"
+        data.selectedQard.facebook = "Testing"
+        data.selectedQard.website = "cointrak.me"
+        data.selectedQard.printStatuses()
         
-        if NSUserDefaults.standardUserDefaults().stringForKey("defaultFirst") == nil {
-            print("No default contact, adding the first contact as the default")
-            
-            let newDefaultContact = CNMutableContact()
-            newDefaultContact.givenName = data.contacts[0].givenName
-            newDefaultContact.familyName = data.contacts[0].familyName
-            newDefaultContact.phoneNumbers = data.contacts[0].phoneNumbers
-            
-            let imageData = UIImagePNGRepresentation(UIImage(named: "DOGE")!)
-            
-            newDefaultContact.imageData = imageData
-            
-            let newDefaultContactCompleted: CNContact = newDefaultContact
-            
-            data.assignDefaultContact(newDefaultContactCompleted)
-            print("Successfully added New Default Contact")
-        } else {
-            print("There is a default contact, loading up the data")
-            let defaultContact = CNMutableContact()
-            
-            let first = NSUserDefaults.standardUserDefaults().stringForKey("defaultFirst")
-            let last = NSUserDefaults.standardUserDefaults().stringForKey("defaultLast")
-            let number = NSUserDefaults.standardUserDefaults().stringForKey("defaultNumber")
-            
-            //image decoding
-            let decodedData = NSUserDefaults.standardUserDefaults().objectForKey("defaultImageData") as! NSData
-            let imageData = NSKeyedUnarchiver.unarchiveObjectWithData(decodedData) as! NSData
-            
-            defaultContact.givenName = first!
-            defaultContact.familyName = last!
-            defaultContact.phoneNumbers = [CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: number!))]
-            defaultContact.imageData = imageData
-            
-            let defaultSetContact: CNContact = defaultContact
-            
-            data.assignDefaultContact(defaultSetContact)
-            print("Successfully added Default Contact from Cache")
-        }
+        qrImage.image = data.selectedQard.contactQR()
+        
+        view.bringSubviewToFront(bannerView)
         
         //ad stuff
         bannerView.adUnitID = "ca-app-pub-7526118464921133/5484331603"
@@ -214,49 +92,11 @@ class QRGeneratorViewController: UIViewController, UITextFieldDelegate, GADBanne
         request.testDevices = data.testDevices
         bannerView.loadRequest(request)
         
-        loadTextFields(data.defaultContact)
-        
-        //retrieve the phone number
-        let defaultPhoneNum = data.defaultContact.phoneNumbers[0].value as! CNPhoneNumber
-        
-        
-        var contactImage: UIImage =  UIImage(named: "DOGE")!
-
-        
-        if let contactImageData = data.defaultContact.thumbnailImageData{
-            contactImage = UIImage(data: contactImageData)!
-        } else if let contactImageData = data.defaultContact.imageData{
-            contactImage = UIImage(data: contactImageData)!
-        }
-        
-        
-        createQR(data.defaultContact.givenName,last: data.defaultContact.familyName,number: defaultPhoneNum.stringValue,contactImage: contactImage)
- 
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        timesViewDidAppear+=1
-        
-        if timesViewDidAppear != 1 && data.didComeFromTable{
-            loadTextFields(data.contacts[data.selectedContact])
-            
-            //retrieve the phone number
-            let defaultPhoneNum = data.contacts[data.selectedContact].phoneNumbers[0].value as! CNPhoneNumber
-            
-            
-            var contactImage: UIImage = UIImage(named: "DOGE")!
-            
-            //if there is data, make the image the new one, if not, then keep the default
-            if let contactImageData = data.contacts[data.selectedContact].thumbnailImageData{
-                print("user has thumbnail image data viewDidAppear")
-                contactImage = UIImage(data: contactImageData)!
-            }
- 
-            //contactImage = UIImage(named: "DOGE")!
-            
-            createQR(data.contacts[data.selectedContact].givenName,last: data.contacts[data.selectedContact].familyName,number: defaultPhoneNum.stringValue,contactImage: contactImage)
-        }
+        qrImage.image = data.selectedQard.contactQR()
     }
     
     
