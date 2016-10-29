@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PoU-lA-9KY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f9f-Gk-aZn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -286,32 +286,66 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-57-wOi">
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFq-bi-5RE">
+                                                        <frame key="frameInset" minX="58" minY="12" width="242" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-2B-pZo">
+                                                        <frame key="frameInset" minX="314" minY="12" width="51" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="switchToggled:" destination="PoU-lA-9KY" eventType="valueChanged" id="abK-RX-1Wy"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="websiteIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ScP-Fm-687">
+                                                        <frame key="frameInset" minX="12" minY="8" width="38" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="aZF-WP-Xvs" secondAttribute="bottom" constant="228" id="4hx-Ks-gOA"/>
-                                            <constraint firstAttribute="height" constant="456" id="FM8-WQ-wbS"/>
-                                            <constraint firstAttribute="bottom" secondItem="xCZ-67-LSP" secondAttribute="bottom" constant="285" id="Fsr-HH-i5e"/>
+                                            <constraint firstAttribute="bottom" secondItem="HLi-fI-qF0" secondAttribute="bottom" constant="171" id="6pk-K3-ths"/>
                                             <constraint firstItem="cmG-7b-O4w" firstAttribute="top" secondItem="RkS-q7-lE1" secondAttribute="bottom" id="KoD-a4-sQf"/>
-                                            <constraint firstAttribute="bottom" secondItem="W4I-bp-fYB" secondAttribute="bottom" constant="399" id="fdo-FJ-yar"/>
-                                            <constraint firstAttribute="bottom" secondItem="G7f-WG-3AS" secondAttribute="bottom" constant="171" id="hPn-DK-TeB"/>
-                                            <constraint firstAttribute="bottom" secondItem="7IU-UN-sZ8" secondAttribute="bottom" constant="342" id="j84-fW-hI6"/>
-                                            <constraint firstAttribute="bottom" secondItem="HLi-fI-qF0" secondAttribute="bottom" constant="114" id="pCN-Aq-AyQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="RkS-q7-lE1" secondAttribute="bottom" constant="57" id="w9a-zp-ff0"/>
+                                            <constraint firstAttribute="bottom" secondItem="RkS-q7-lE1" secondAttribute="bottom" constant="114" id="axN-mf-lxK"/>
+                                            <constraint firstAttribute="bottom" secondItem="aZF-WP-Xvs" secondAttribute="bottom" constant="285" id="iGA-4b-Hip"/>
+                                            <constraint firstAttribute="bottom" secondItem="W4I-bp-fYB" secondAttribute="bottom" constant="456" id="kRF-rW-uCz"/>
+                                            <constraint firstItem="G7f-WG-3AS" firstAttribute="centerY" secondItem="fIC-aL-y6k" secondAttribute="centerY" id="qRO-v2-J0M"/>
+                                            <constraint firstAttribute="bottom" secondItem="cmG-7b-O4w" secondAttribute="bottom" constant="57" id="uY0-WM-Ltz"/>
+                                            <constraint firstAttribute="bottom" secondItem="7IU-UN-sZ8" secondAttribute="bottom" constant="399" id="vko-vb-Wqp"/>
+                                            <constraint firstAttribute="bottom" secondItem="xCZ-67-LSP" secondAttribute="bottom" constant="342" id="xc3-e0-Thr"/>
                                         </constraints>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1DL-HI-5EC"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1DL-HI-5EC">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="eqp-Ef-2TN"/>
+                                            <constraint firstAttribute="width" constant="151" id="gA3-o2-gYk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHW-4K-BTM">
+                                        <rect key="frame" x="278" y="57" width="83" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Create QR" backgroundImage="whiteSquare"/>
+                                        <connections>
+                                            <action selector="qrButtonTemp:" destination="PoU-lA-9KY" eventType="touchUpInside" id="4d0-Aw-ifF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="centerX" secondItem="EFh-GQ-6aN" secondAttribute="centerX" id="37k-Pw-gDm"/>
-                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" constant="87" id="8e9-IS-eMG"/>
-                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="top" secondItem="EFh-GQ-6aN" secondAttribute="top" constant="211" id="hZj-GC-vCU"/>
-                                    <constraint firstAttribute="trailing" secondItem="fIC-aL-y6k" secondAttribute="trailing" id="hx3-Tr-Dxk"/>
-                                    <constraint firstAttribute="bottom" secondItem="fIC-aL-y6k" secondAttribute="bottom" id="iLC-Au-6qv"/>
-                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="top" secondItem="EFh-GQ-6aN" secondAttribute="topMargin" id="j5R-HK-nVk"/>
-                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="width" secondItem="EFh-GQ-6aN" secondAttribute="width" id="mzA-zA-OAj"/>
-                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" id="tzY-1o-3jY"/>
-                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="centerX" secondItem="fIC-aL-y6k" secondAttribute="centerX" id="vXj-sA-DKN"/>
-                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="top" secondItem="1DL-HI-5EC" secondAttribute="bottom" constant="3" id="ycu-Kf-Dew"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="top" secondItem="EFh-GQ-6aN" secondAttribute="top" id="37A-Jt-RyI"/>
+                                    <constraint firstAttribute="trailing" secondItem="fIC-aL-y6k" secondAttribute="trailing" id="9hS-MR-kXp"/>
+                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="top" secondItem="1DL-HI-5EC" secondAttribute="bottom" constant="4" id="FH0-4n-5Ir"/>
+                                    <constraint firstItem="fIC-aL-y6k" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" id="G7t-q2-ewq"/>
+                                    <constraint firstAttribute="bottom" secondItem="1DL-HI-5EC" secondAttribute="bottom" constant="517" id="GJ2-8j-wwr"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="centerX" secondItem="EFh-GQ-6aN" secondAttribute="centerX" id="Lo7-Wg-ySU"/>
+                                    <constraint firstItem="1DL-HI-5EC" firstAttribute="centerX" secondItem="fIC-aL-y6k" secondAttribute="centerX" id="Nyp-ZI-91j"/>
+                                    <constraint firstAttribute="bottom" secondItem="fIC-aL-y6k" secondAttribute="bottom" id="Wqf-e7-bLh"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -341,6 +375,8 @@
                         <outlet property="testImageView" destination="1DL-HI-5EC" id="cI7-x6-NoV"/>
                         <outlet property="twitterField" destination="NDC-aZ-KsV" id="cB0-bA-aF5"/>
                         <outlet property="twitterSwitch" destination="9oH-DZ-L4f" id="uPZ-f4-br3"/>
+                        <outlet property="websiteField" destination="TFq-bi-5RE" id="TX4-BQ-9NG"/>
+                        <outlet property="websiteSwitch" destination="Qbj-2B-pZo" id="50D-0H-OL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaD-AZ-K7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,11 +577,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bM5-xq-Gsi" id="HxG-IG-O4S">
-                                            <frame key="frameInset" width="375" height="49"/>
+                                            <frame key="frameInset" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D6k-6e-PjG">
-                                                    <frame key="frameInset" minX="15" width="345" height="49"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -586,6 +622,7 @@
         <image name="phoneIcon" width="225" height="225"/>
         <image name="snapchatIcon" width="225" height="225"/>
         <image name="twitterIcon" width="179" height="119"/>
+        <image name="websiteIcon" width="225" height="225"/>
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
 </document>

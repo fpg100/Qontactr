@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var snapchatField: UITextField!
     @IBOutlet var facebookField: UITextField!
     @IBOutlet var instagramField: UITextField!
+    @IBOutlet var websiteField: UITextField!
     
     //linking switch outlets
     @IBOutlet var firstNameSwitch: UISwitch!
@@ -33,6 +34,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var snapchatSwitch: UISwitch!
     @IBOutlet var facebookSwitch: UISwitch!
     @IBOutlet var instagramSwitch: UISwitch!
+    @IBOutlet var websiteSwitch: UISwitch!
     
     //load info from a Qard object into the form
     func loadForm(qard: Qard) {
@@ -45,6 +47,7 @@ class ProfileViewController: UIViewController {
         snapchatField.text = qard.snapchat
         facebookField.text = qard.facebook
         instagramField.text = qard.instagram
+        websiteField.text = qard.website
         
         //setting switches to the state of the variables
         firstNameSwitch.setOn(qard.showFirstName, animated: true)
@@ -55,6 +58,7 @@ class ProfileViewController: UIViewController {
         snapchatSwitch.setOn(qard.showSnapchat, animated: true)
         facebookSwitch.setOn(qard.showFacebook, animated: true)
         instagramSwitch.setOn(qard.showInstagram, animated: true)
+        websiteSwitch.setOn(qard.showWebsite, animated: true)
     }
     
     func setStatuses(qard: Qard){
@@ -66,12 +70,19 @@ class ProfileViewController: UIViewController {
         qard.showSnapchat = snapchatSwitch.on
         qard.showFacebook = facebookSwitch.on
         qard.showInstagram = instagramSwitch.on
+        qard.showWebsite = websiteSwitch.on
     }
     
     //one action for every switch
     @IBAction func switchToggled(sender: AnyObject) {
         setStatuses(data.selectedQard)
         data.selectedQard.printStatuses()
+    }
+    
+    @IBAction func qrButtonTemp(sender: AnyObject) {
+    
+        testImageView.image = data.selectedQard.contactQR()
+        
     }
     
     override func viewDidLoad() {

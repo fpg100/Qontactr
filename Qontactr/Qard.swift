@@ -20,6 +20,7 @@ class Qard {
     var snapchat: String = ""
     var facebook: String = ""
     var instagram: String = ""
+    var website: String = ""
     
     init(first: String, last: String){
         firstName = first
@@ -29,23 +30,25 @@ class Qard {
     //all the bools for showing or not showing certain information in a qr code
     var showFirstName: Bool = true
     var showLastName: Bool = true
-    var showPhoneNumber: Bool = false
+    var showPhoneNumber: Bool = true
     var showEmailAddress: Bool = false
     var showTwitter: Bool = false
     var showSnapchat: Bool = false
     var showFacebook: Bool = false
     var showInstagram: Bool = false
+    var showWebsite: Bool = false
     
     func printStatuses(){
         print("\n========================================================")
-        print("First Name:\(firstName) Status: \(showFirstName)")
-        print("Last Name:\(lastName) Status: \(showLastName)")
-        print("Phone Number:\(phoneNumber) Status: \(showPhoneNumber)")
-        print("Email:\(emailAddress) Status: \(showEmailAddress)")
-        print("Twitter:\(twitter) Status: \(showTwitter)")
-        print("Snapchat:\(snapchat) Status: \(showSnapchat)")
-        print("Facebook:\(facebook) Status: \(showFacebook)")
-        print("Instagram:\(instagram) Status: \(showInstagram)")
+        print("First Name: \(firstName) Status: \(showFirstName)")
+        print("Last Name: \(lastName) Status: \(showLastName)")
+        print("Phone Number: \(phoneNumber) Status: \(showPhoneNumber)")
+        print("Email: \(emailAddress) Status: \(showEmailAddress)")
+        print("Twitter: \(twitter) Status: \(showTwitter)")
+        print("Snapchat: \(snapchat) Status: \(showSnapchat)")
+        print("Facebook: \(facebook) Status: \(showFacebook)")
+        print("Instagram: \(instagram) Status: \(showInstagram)")
+        print("Website: \(website) Status: \(showWebsite)")
         print("========================================================\n")
     }
     
@@ -89,6 +92,10 @@ class Qard {
         
         if showInstagram && instagram != "" {
             contactJsonString += jsonify("instagram", value: instagram)
+        }
+        
+        if showWebsite && website != "" {
+            contactJsonString += jsonify("website", value: website)
         }
         
         contactJsonString += "}"
