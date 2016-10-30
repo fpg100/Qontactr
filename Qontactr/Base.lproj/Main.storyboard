@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2741.5999999999999" y="1240.9295352323838"/>
+            <point key="canvasLocation" x="2742" y="1155"/>
         </scene>
         <!--My Qard-->
         <scene sceneID="0w7-MK-MR8">
@@ -487,7 +487,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3681" y="152"/>
+            <point key="canvasLocation" x="4310" y="451"/>
         </scene>
         <!--Qontactr-->
         <scene sceneID="JtK-Ef-Puj">
@@ -584,14 +584,14 @@
                         <outlet property="qrImage" destination="Sc7-c2-xrZ" id="cG9-So-hEa"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="scanSegue" id="yOW-OH-fsZ"/>
                         <segue destination="PoU-lA-9KY" kind="show" identifier="profileSegue" id="CxN-9D-bEa"/>
-                        <segue destination="wrC-LD-rls" kind="show" identifier="qardListSegue" id="WQU-tv-5Wr"/>
+                        <segue destination="wrC-LD-rls" kind="show" identifier="qardListSegue" id="bS6-mc-j9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjV-Vv-qvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2743.1999999999998" y="451.12443778110946"/>
+            <point key="canvasLocation" x="2742" y="450"/>
         </scene>
-        <!--My Qards View Controller-->
+        <!--Title-->
         <scene sceneID="ZCu-br-RTL">
             <objects>
                 <viewController id="wrC-LD-rls" customClass="MyQardsViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
@@ -638,13 +638,21 @@
                             <constraint firstItem="uJl-5x-p2a" firstAttribute="centerY" secondItem="nUV-N8-fl9" secondAttribute="centerY" id="FTD-Rp-EtK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="YQb-Ad-s0V">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pgf-GJ-bqq">
+                            <connections>
+                                <action selector="addQard:" destination="wrC-LD-rls" id="cFm-ja-igX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="qardTable" destination="uJl-5x-p2a" id="yAD-i0-lRI"/>
+                        <segue destination="PoU-lA-9KY" kind="show" identifier="myQardsToEdit" id="AY0-Bu-xk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg1-VP-rwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3680.8000000000002" y="848.72563718140941"/>
+            <point key="canvasLocation" x="3524" y="809"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zXm-0a-mwg">
@@ -662,7 +670,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKv-ex-rbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="451.12443778110946"/>
+            <point key="canvasLocation" x="1887" y="450"/>
         </scene>
     </scenes>
     <resources>
@@ -676,4 +684,7 @@
         <image name="websiteIcon" width="225" height="225"/>
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AY0-Bu-xk1"/>
+    </inferredMetricsTieBreakers>
 </document>
