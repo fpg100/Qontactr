@@ -70,9 +70,15 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
             print(stringValue)
             
             //if there is no first name, IE if it isn't a QR code generated from the app itself, then don't add any contact and alert the user, otherwise create contact from the data
-            
-            self.presentAlert("QR Scanned", message: stringValue)
-            
+            if stringValue.hasPrefix("http://cointrak.me"){
+                var qontactString = stringValue
+                
+                let range = qontactString.startIndex...qontactString.startIndex.advancedBy(18)
+                
+                qontactString.removeRange(range)
+                
+                self.presentAlert("QR Scanned", message: qontactString)
+            }
             
         }
         scanner.scanFrame = view.bounds
