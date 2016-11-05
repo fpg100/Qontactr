@@ -100,6 +100,8 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         
         setupDefaults()
         
+        nameLabel.text = data.selectedQard.firstName
+        companyLabel.text = data.selectedQard.companyName
         qrImage.image = data.selectedQard.contactQR()
         
         //bring the ad over the temp banner

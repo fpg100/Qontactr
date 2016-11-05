@@ -78,6 +78,8 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
                 qontactString.removeRange(range)
                 
                 self.presentAlert("QR Scanned", message: qontactString)
+            } else {
+                self.presentAlert("Not a Qontactr QR Code", message: stringValue)
             }
             
         }
