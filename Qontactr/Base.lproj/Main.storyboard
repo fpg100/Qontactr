@@ -698,78 +698,11 @@
                     <connections>
                         <outlet property="qardTable" destination="uJl-5x-p2a" id="yAD-i0-lRI"/>
                         <segue destination="PoU-lA-9KY" kind="show" identifier="myQardsToEdit" id="AY0-Bu-xk1"/>
-                        <segue destination="jD2-0i-gjl" kind="presentation" id="dY8-SE-ASb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg1-VP-rwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3524" y="808.24587706146929"/>
-        </scene>
-        <!--Contact Table View Controller-->
-        <scene sceneID="akp-Kq-Xyb">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jD2-0i-gjl" customClass="ContactTableViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uj1-rI-IjT"/>
-                        <viewControllerLayoutGuide type="bottom" id="djt-Kn-Etb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xn5-vd-HHp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-wK-dET">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lvr-fE-k8R" detailTextLabel="ezr-5M-k2W" imageView="QoM-bC-XfS" style="IBUITableViewCellStyleSubtitle" id="lKM-c7-794">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lKM-c7-794" id="JF9-b7-KeD">
-                                            <frame key="frameInset" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lvr-fE-k8R">
-                                                    <frame key="frameInset" minX="73" minY="4" width="34" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ezr-5M-k2W">
-                                                    <frame key="frameInset" minX="73" minY="25" width="44" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="emailIcon" id="QoM-bC-XfS">
-                                                    <frame key="frameInset" minX="15" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="jD2-0i-gjl" id="GcL-rL-Nc5"/>
-                                    <outlet property="delegate" destination="jD2-0i-gjl" id="pZS-te-e8D"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tfg-wK-dET" firstAttribute="height" secondItem="xn5-vd-HHp" secondAttribute="height" id="02T-IF-kZM"/>
-                            <constraint firstItem="tfg-wK-dET" firstAttribute="centerX" secondItem="xn5-vd-HHp" secondAttribute="centerX" id="EXl-uh-qor"/>
-                            <constraint firstItem="tfg-wK-dET" firstAttribute="centerY" secondItem="xn5-vd-HHp" secondAttribute="centerY" id="HJO-YT-Ltb"/>
-                            <constraint firstItem="tfg-wK-dET" firstAttribute="width" secondItem="xn5-vd-HHp" secondAttribute="width" id="nTJ-vt-fzU"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="contactTable" destination="tfg-wK-dET" id="3Cu-5s-UbP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ljQ-9g-dEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4308" y="1165.3673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zXm-0a-mwg">
