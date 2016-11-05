@@ -65,7 +65,6 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
         data.myQards.append(Qard(first: "Firstname Lastname"))
         data.selectedQard = data.myQards[data.myQards.count-1]
         data.saveQards()
-        qardTable.reloadData()
         self.performSegueWithIdentifier("myQardsToEdit", sender: UIBarButtonItem.self)
         
     }
@@ -79,11 +78,12 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
      
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete", handler: {(action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             
-            if self.data.myQards.count > 1 /*&& self.presentAlertBool("Are You Sure?", message: "Once a Qard is deleted it cannot be recovered.")*/{
+            if self.data.myQards.count > 1 {
                 self.data.myQards.removeAtIndex(indexPath.row)
                 self.qardTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                 self.data.selectedQard = self.data.myQards[0]
                 self.data.saveQards()
+    
             } else {
                 print("Attempt to delete last Qontact denied")
                 self.presentAlert("Can't Delete", message: "You must have at least 1 Qard.  You can always edit it.")

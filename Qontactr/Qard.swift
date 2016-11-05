@@ -30,8 +30,8 @@ class Qard: NSObject, NSCoding {
 
     //all the bools for showing or not showing certain information in a qr code
     var showFirstName: Bool = true
-    var showCompanyName: Bool = true
-    var showPhoneNumber: Bool = true
+    var showCompanyName: Bool = false
+    var showPhoneNumber: Bool = false
     var showEmailAddress: Bool = false
     var showTwitter: Bool = false
     var showLinkedin: Bool = false

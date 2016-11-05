@@ -492,7 +492,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4309.6000000000004" y="450.22488755622192"/>
+            <point key="canvasLocation" x="4308" y="449"/>
         </scene>
         <!--Qontactr-->
         <scene sceneID="JtK-Ef-Puj">
@@ -701,6 +701,6 @@
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AY0-Bu-xk1"/>
+        <segue reference="CxN-9D-bEa"/>
     </inferredMetricsTieBreakers>
 </document>

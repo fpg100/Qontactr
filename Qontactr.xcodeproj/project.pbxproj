@@ -98,6 +98,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52054C5F1DCE730500478107 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52B488EE1D7CDA6100015A9A /* ScanViewController.swift */,
+				52A3903D1DC14842001C071C /* ProfileViewController.swift */,
+				52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */,
+				527E32471DC55A5600D29756 /* MyQardsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		52054C601DCE732700478107 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5268D3E61D7CD1D30071CD56 /* LaunchScreen.storyboard */,
+				5268D3E11D7CD1D30071CD56 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		52054C621DCE737000478107 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				52A3903F1DC14D99001C071C /* Qard.swift */,
+				52B488EC1D7CD96B00015A9A /* Data.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		52054C631DCE738D00478107 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5268D3E41D7CD1D30071CD56 /* Assets.xcassets */,
+				5268D3DD1D7CD1D30071CD56 /* AppDelegate.swift */,
+				5268D3E91D7CD1D30071CD56 /* Info.plist */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		5268D3D11D7CD1D30071CD56 = {
 			isa = PBXGroup;
 			children = (
@@ -123,17 +162,10 @@
 		5268D3DC1D7CD1D30071CD56 /* Qontactr */ = {
 			isa = PBXGroup;
 			children = (
-				5268D3DD1D7CD1D30071CD56 /* AppDelegate.swift */,
-				52B488EC1D7CD96B00015A9A /* Data.swift */,
-				5268D3E11D7CD1D30071CD56 /* Main.storyboard */,
-				527E32471DC55A5600D29756 /* MyQardsViewController.swift */,
-				52A3903F1DC14D99001C071C /* Qard.swift */,
-				52A3903D1DC14842001C071C /* ProfileViewController.swift */,
-				52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */,
-				52B488EE1D7CDA6100015A9A /* ScanViewController.swift */,
-				5268D3E41D7CD1D30071CD56 /* Assets.xcassets */,
-				5268D3E61D7CD1D30071CD56 /* LaunchScreen.storyboard */,
-				5268D3E91D7CD1D30071CD56 /* Info.plist */,
+				52054C631DCE738D00478107 /* Other */,
+				52054C621DCE737000478107 /* Classes */,
+				52054C601DCE732700478107 /* Storyboards */,
+				52054C5F1DCE730500478107 /* View Controllers */,
 			);
 			path = Qontactr;
 			sourceTree = "<group>";

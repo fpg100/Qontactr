@@ -80,7 +80,7 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         }
         
         let encodedQardArray = NSUserDefaults.standardUserDefaults().objectForKey("encodedQardArray") as! NSData
-        var decodedQardArray = NSKeyedUnarchiver.unarchiveObjectWithData(encodedQardArray) as! [Qard]
+        let decodedQardArray = NSKeyedUnarchiver.unarchiveObjectWithData(encodedQardArray) as! [Qard]
         
         data.myQards = decodedQardArray
         data.selectedQard = data.myQards[0]
@@ -95,7 +95,6 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         
         setupDefaults()
-        
         
         qrImage.image = data.selectedQard.contactQR()
         

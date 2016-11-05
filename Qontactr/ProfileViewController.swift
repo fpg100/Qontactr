@@ -130,7 +130,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         })
         
-        alertController.addAction(cameraAction)
+        //alertController.addAction(cameraAction) //remove temp bc of rotation issues
         alertController.addAction(galleryAction)
         
         presentViewController(alertController, animated: true, completion: nil)
@@ -143,6 +143,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             profileImageView.image = data.cropToBounds(pickedImage, width: 100, height: 100)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        saveFormToQard(data.selectedQard)
     }
     
     override func viewDidLoad() {
