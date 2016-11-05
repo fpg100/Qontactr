@@ -20,6 +20,10 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     //image view that the QR code gets put onto
     @IBOutlet var qrImage: UIImageView!
     
+    //labels
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var companyLabel: UILabel!
+    
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
     
@@ -113,6 +117,8 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        nameLabel.text = data.selectedQard.firstName
+        companyLabel.text = data.selectedQard.companyName
         qrImage.image = data.selectedQard.contactQR()
     }
     
