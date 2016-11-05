@@ -610,7 +610,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uJl-5x-p2a">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fuV-10-4WB" detailTextLabel="c0H-zQ-3gs" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="D9B-Va-7qZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fuV-10-4WB" detailTextLabel="c0H-zQ-3gs" imageView="GDM-vL-oUJ" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="D9B-Va-7qZ">
                                         <rect key="frame" x="0.0" y="92" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9B-Va-7qZ" id="R8J-HU-R7Q">
@@ -618,19 +618,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fuV-10-4WB">
-                                                    <frame key="frameInset" minX="15" minY="10" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="84" minY="10" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0H-zQ-3gs">
-                                                    <frame key="frameInset" minX="15" minY="31" width="41" height="14"/>
+                                                    <frame key="frameInset" minX="84" minY="31" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.22398560209424079" green="0.22398560209424079" blue="0.22398560209424079" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="emailIcon" id="GDM-vL-oUJ">
+                                                    <frame key="frameInset" minX="15" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -696,6 +701,6 @@
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CxN-9D-bEa"/>
+        <segue reference="AY0-Bu-xk1"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let data = Data.sharedInstance
         
@@ -114,6 +114,35 @@ class ProfileViewController: UIViewController {
     
     @IBAction func changePicButton(sender: AnyObject) {
         
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        
+        let alertController = UIAlertController(title: "Change the Picture", message: "Choose From", preferredStyle: .ActionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .Default, handler: { (action) in
+            pickerController.sourceType = .Camera
+            self.presentViewController(pickerController, animated: true, completion: nil)
+        
+        })
+        let galleryAction = UIAlertAction(title: "Photo Library", style: .Default, handler: { (action) in
+            pickerController.sourceType = .PhotoLibrary
+            self.presentViewController(pickerController, animated: true, completion: nil)
+            
+        })
+        
+        alertController.addAction(cameraAction)
+        alertController.addAction(galleryAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    //image picker delegate function
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            profileImageView.image = data.cropToBounds(pickedImage, width: 100, height: 100)
+        }
     }
     
     override func viewDidLoad() {

@@ -22,7 +22,7 @@ class Qard: NSObject, NSCoding {
     var instagram: String = ""
     var website: String = ""
     
-    var profileImage: UIImage = UIImage(named: "twitterIcon")!
+    var profileImage: UIImage = UIImage(named: "linkedinIcon")!
     
     init(first: String){
         firstName = first
@@ -125,8 +125,9 @@ class Qard: NSObject, NSCoding {
     
     func printStatuses(){
         print("\n========================================================")
+        print("Image: \(profileImage)")
         print("First Name: \(firstName) Status: \(showFirstName)")
-        print("Last Name: \(companyName) Status: \(showCompanyName)")
+        print("Company: \(companyName) Status: \(showCompanyName)")
         print("Phone Number: \(phoneNumber) Status: \(showPhoneNumber)")
         print("Email: \(emailAddress) Status: \(showEmailAddress)")
         print("Twitter: \(twitter) Status: \(showTwitter)")
@@ -190,5 +191,5 @@ class Qard: NSObject, NSCoding {
         return QRCode.generateImage(contactJsonString, avatarImage: profileImage)!
         
     }
-
+    
 }
