@@ -88,6 +88,8 @@ class ProfileViewController: UIViewController {
         qard.showInstagram = instagramSwitch.on
         qard.showWebsite = websiteSwitch.on
         
+        qard.profileImage = profileImageView.image!
+        
         qard.printStatuses()
         
         data.saveQards()
@@ -108,6 +110,10 @@ class ProfileViewController: UIViewController {
     
     @IBAction func saveButton(sender: AnyObject) {
         saveFormToQard(data.selectedQard)
+    }
+    
+    @IBAction func changePicButton(sender: AnyObject) {
+        
     }
     
     override func viewDidLoad() {
