@@ -17,7 +17,7 @@ class Qard: NSObject, NSCoding {
     var phoneNumber: String = ""
     var emailAddress: String = ""
     var twitter: String = ""
-    var snapchat: String = ""
+    var linkedin: String = ""
     var facebook: String = ""
     var instagram: String = ""
     var website: String = ""
@@ -34,7 +34,7 @@ class Qard: NSObject, NSCoding {
     var showPhoneNumber: Bool = true
     var showEmailAddress: Bool = false
     var showTwitter: Bool = false
-    var showSnapchat: Bool = false
+    var showLinkedin: Bool = false
     var showFacebook: Bool = false
     var showInstagram: Bool = false
     var showWebsite: Bool = false
@@ -56,7 +56,7 @@ class Qard: NSObject, NSCoding {
         coder.encodeObject(phoneNumber, forKey: "phoneNumber")
         coder.encodeObject(emailAddress, forKey: "emailAddress")
         coder.encodeObject(twitter, forKey: "twitter")
-        coder.encodeObject(snapchat, forKey: "snapchat")
+        coder.encodeObject(linkedin, forKey: "linkedin")
         coder.encodeObject(facebook, forKey: "facebook")
         coder.encodeObject(instagram, forKey: "instagram")
         coder.encodeObject(website, forKey: "website")
@@ -67,7 +67,7 @@ class Qard: NSObject, NSCoding {
         coder.encodeBool(showPhoneNumber, forKey: "showPhoneNumber")
         coder.encodeBool(showEmailAddress, forKey: "showEmailAddress")
         coder.encodeBool(showTwitter, forKey: "showTwitter")
-        coder.encodeBool(showSnapchat, forKey: "showSnapchat")
+        coder.encodeBool(showLinkedin, forKey: "showLinkedin")
         coder.encodeBool(showFacebook, forKey: "showFacebook")
         coder.encodeBool(showInstagram, forKey: "showInstagram")
         coder.encodeBool(showWebsite, forKey: "showWebsite")
@@ -84,7 +84,7 @@ class Qard: NSObject, NSCoding {
             let phoneNumber = decoder.decodeObjectForKey("phoneNumber") as? String,
             let emailAddress = decoder.decodeObjectForKey("emailAddress") as? String,
             let twitter = decoder.decodeObjectForKey("twitter") as? String,
-            let snapchat = decoder.decodeObjectForKey("snapchat") as? String,
+            let linkedin = decoder.decodeObjectForKey("linkedin") as? String,
             let facebook = decoder.decodeObjectForKey("facebook") as? String,
             let instagram = decoder.decodeObjectForKey("instagram") as? String,
             let website = decoder.decodeObjectForKey("website") as? String,
@@ -101,7 +101,7 @@ class Qard: NSObject, NSCoding {
         self.phoneNumber = phoneNumber
         self.emailAddress = emailAddress
         self.twitter = twitter
-        self.snapchat = snapchat
+        self.linkedin = linkedin
         self.facebook = facebook
         self.instagram = instagram
         self.website = website
@@ -113,7 +113,7 @@ class Qard: NSObject, NSCoding {
         self.showPhoneNumber = decoder.decodeBoolForKey("showPhoneNumber")
         self.showEmailAddress = decoder.decodeBoolForKey("showEmailAddress")
         self.showTwitter = decoder.decodeBoolForKey("showTwitter")
-        self.showSnapchat = decoder.decodeBoolForKey("showSnapchat")
+        self.showLinkedin = decoder.decodeBoolForKey("showLinkedin")
         self.showFacebook = decoder.decodeBoolForKey("showFacebook")
         self.showInstagram = decoder.decodeBoolForKey("showInstagram")
         self.showWebsite = decoder.decodeBoolForKey("showWebsite")
@@ -130,7 +130,7 @@ class Qard: NSObject, NSCoding {
         print("Phone Number: \(phoneNumber) Status: \(showPhoneNumber)")
         print("Email: \(emailAddress) Status: \(showEmailAddress)")
         print("Twitter: \(twitter) Status: \(showTwitter)")
-        print("Snapchat: \(snapchat) Status: \(showSnapchat)")
+        print("linkedin: \(linkedin) Status: \(showLinkedin)")
         print("Facebook: \(facebook) Status: \(showFacebook)")
         print("Instagram: \(instagram) Status: \(showInstagram)")
         print("Website: \(website) Status: \(showWebsite)")
@@ -168,8 +168,8 @@ class Qard: NSObject, NSCoding {
             contactJsonString += jsonify("twitter", value: twitter)
         }
         
-        if showSnapchat && snapchat != "" {
-            contactJsonString += jsonify("snapchat", value: snapchat)
+        if showLinkedin && linkedin != "" {
+            contactJsonString += jsonify("linkedin", value: linkedin)
         }
         if showFacebook && facebook != "" {
             contactJsonString += jsonify("facebook", value: facebook)

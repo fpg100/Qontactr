@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var phoneNumberField: UITextField!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var twitterField: UITextField!
-    @IBOutlet var snapchatField: UITextField!
+    @IBOutlet var linkedinField: UITextField!
     @IBOutlet var facebookField: UITextField!
     @IBOutlet var instagramField: UITextField!
     @IBOutlet var websiteField: UITextField!
@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var phoneNumberSwitch: UISwitch!
     @IBOutlet var emailSwitch: UISwitch!
     @IBOutlet var twitterSwitch: UISwitch!
-    @IBOutlet var snapchatSwitch: UISwitch!
+    @IBOutlet var linkedinSwitch: UISwitch!
     @IBOutlet var facebookSwitch: UISwitch!
     @IBOutlet var instagramSwitch: UISwitch!
     @IBOutlet var websiteSwitch: UISwitch!
@@ -45,7 +45,7 @@ class ProfileViewController: UIViewController {
         phoneNumberField.text = qard.phoneNumber
         emailField.text = qard.emailAddress
         twitterField.text = qard.twitter
-        snapchatField.text = qard.snapchat
+        linkedinField.text = qard.linkedin
         facebookField.text = qard.facebook
         instagramField.text = qard.instagram
         websiteField.text = qard.website
@@ -56,7 +56,7 @@ class ProfileViewController: UIViewController {
         phoneNumberSwitch.setOn(qard.showPhoneNumber, animated: true)
         emailSwitch.setOn(qard.showEmailAddress, animated: true)
         twitterSwitch.setOn(qard.showTwitter, animated: true)
-        snapchatSwitch.setOn(qard.showSnapchat, animated: true)
+        linkedinSwitch.setOn(qard.showLinkedin, animated: true)
         facebookSwitch.setOn(qard.showFacebook, animated: true)
         instagramSwitch.setOn(qard.showInstagram, animated: true)
         websiteSwitch.setOn(qard.showWebsite, animated: true)
@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController {
         qard.phoneNumber = phoneNumberField.text!
         qard.emailAddress = emailField.text!
         qard.twitter = twitterField.text!
-        qard.snapchat = snapchatField.text!
+        qard.linkedin = linkedinField.text!
         qard.facebook = facebookField.text!
         qard.instagram = instagramField.text!
         qard.website = websiteField.text!
@@ -83,7 +83,7 @@ class ProfileViewController: UIViewController {
         qard.showPhoneNumber = phoneNumberSwitch.on
         qard.showEmailAddress = emailSwitch.on
         qard.showTwitter = twitterSwitch.on
-        qard.showSnapchat = snapchatSwitch.on
+        qard.showLinkedin = linkedinSwitch.on
         qard.showFacebook = facebookSwitch.on
         qard.showInstagram = instagramSwitch.on
         qard.showWebsite = websiteSwitch.on

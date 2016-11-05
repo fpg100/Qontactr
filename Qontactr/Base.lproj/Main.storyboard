@@ -272,7 +272,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLi-fI-qF0">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Snapchat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-w0-I5c">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Linkedin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-w0-I5c">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -282,7 +282,7 @@
                                                             <action selector="switchToggled:" destination="PoU-lA-9KY" eventType="valueChanged" id="5Ky-fb-sNc"/>
                                                         </connections>
                                                     </switch>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snapchatIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qar-z2-LuF">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedinIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qar-z2-LuF">
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="38" id="1V7-iP-PZn"/>
                                                             <constraint firstAttribute="width" secondItem="qar-z2-LuF" secondAttribute="height" multiplier="1:1" id="jtH-4r-g3r"/>
@@ -468,11 +468,11 @@
                         <outlet property="firstNameSwitch" destination="5o7-Tf-wtB" id="3Zf-yu-IfY"/>
                         <outlet property="instagramField" destination="bIK-Xk-43A" id="fGn-aG-Wsv"/>
                         <outlet property="instagramSwitch" destination="fx8-kX-CDB" id="w8X-0U-neG"/>
+                        <outlet property="linkedinField" destination="qDr-w0-I5c" id="Fbe-fV-FmC"/>
+                        <outlet property="linkedinSwitch" destination="o7N-1E-Oqr" id="P05-sm-IhJ"/>
                         <outlet property="phoneNumberField" destination="cXT-w3-Ly8" id="qS7-cH-jSB"/>
                         <outlet property="phoneNumberSwitch" destination="JbX-IM-1Yg" id="M5S-Kj-j8D"/>
                         <outlet property="profileImageView" destination="i2I-bm-zip" id="4yg-Y8-KQ3"/>
-                        <outlet property="snapchatField" destination="qDr-w0-I5c" id="nqT-jX-ryk"/>
-                        <outlet property="snapchatSwitch" destination="o7N-1E-Oqr" id="6My-n2-El5"/>
                         <outlet property="twitterField" destination="NDC-aZ-KsV" id="cB0-bA-aF5"/>
                         <outlet property="twitterSwitch" destination="9oH-DZ-L4f" id="uPZ-f4-br3"/>
                         <outlet property="websiteField" destination="TFq-bi-5RE" id="TX4-BQ-9NG"/>
@@ -676,8 +676,8 @@
         <image name="emailIcon" width="204" height="204"/>
         <image name="facebookIcon" width="121" height="121"/>
         <image name="instagramIcon" width="123" height="123"/>
+        <image name="linkedinIcon" width="225" height="225"/>
         <image name="phoneIcon" width="225" height="225"/>
-        <image name="snapchatIcon" width="225" height="225"/>
         <image name="twitterIcon" width="179" height="119"/>
         <image name="websiteIcon" width="225" height="225"/>
         <image name="whiteSquare" width="200" height="200"/>
