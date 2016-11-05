@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
         
     //linking textFields
     @IBOutlet var firstNameField: UITextField!
-    @IBOutlet var lastNameField: UITextField!
+    @IBOutlet var companyNameField: UITextField!
     @IBOutlet var phoneNumberField: UITextField!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var twitterField: UITextField!
@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     
     //linking switch outlets
     @IBOutlet var firstNameSwitch: UISwitch!
-    @IBOutlet var lastNameSwitch: UISwitch!
+    @IBOutlet var companyNameSwitch: UISwitch!
     @IBOutlet var phoneNumberSwitch: UISwitch!
     @IBOutlet var emailSwitch: UISwitch!
     @IBOutlet var twitterSwitch: UISwitch!
@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     func loadForm(qard: Qard) {
         //loading the text from the qard into the fields
         firstNameField.text = qard.firstName
-        lastNameField.text = qard.lastName
+        companyNameField.text = qard.companyName
         phoneNumberField.text = qard.phoneNumber
         emailField.text = qard.emailAddress
         twitterField.text = qard.twitter
@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController {
         
         //setting switches to the state of the variables
         firstNameSwitch.setOn(qard.showFirstName, animated: true)
-        lastNameSwitch.setOn(qard.showLastName, animated: true)
+        companyNameSwitch.setOn(qard.showCompanyName, animated: true)
         phoneNumberSwitch.setOn(qard.showPhoneNumber, animated: true)
         emailSwitch.setOn(qard.showEmailAddress, animated: true)
         twitterSwitch.setOn(qard.showTwitter, animated: true)
@@ -68,7 +68,7 @@ class ProfileViewController: UIViewController {
     func saveFormToQard(qard: Qard){
         //values set
         qard.firstName = firstNameField.text!
-        qard.lastName = lastNameField.text!
+        qard.companyName = companyNameField.text!
         qard.phoneNumber = phoneNumberField.text!
         qard.emailAddress = emailField.text!
         qard.twitter = twitterField.text!
@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController {
         
         //bools set
         qard.showFirstName = firstNameSwitch.on
-        qard.showLastName = lastNameSwitch.on
+        qard.showCompanyName = companyNameSwitch.on
         qard.showPhoneNumber = phoneNumberSwitch.on
         qard.showEmailAddress = emailSwitch.on
         qard.showTwitter = twitterSwitch.on

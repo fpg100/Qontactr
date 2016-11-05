@@ -13,7 +13,7 @@ import SwiftQRCode
 class Qard: NSObject, NSCoding {
     
     var firstName: String
-    var lastName: String
+    var companyName: String = ""
     var phoneNumber: String = ""
     var emailAddress: String = ""
     var twitter: String = ""
@@ -24,14 +24,13 @@ class Qard: NSObject, NSCoding {
     
     var profileImage: UIImage = UIImage(named: "twitterIcon")!
     
-    init(first: String, last: String){
+    init(first: String){
         firstName = first
-        lastName = last
     }
 
     //all the bools for showing or not showing certain information in a qr code
     var showFirstName: Bool = true
-    var showLastName: Bool = true
+    var showCompanyName: Bool = true
     var showPhoneNumber: Bool = true
     var showEmailAddress: Bool = false
     var showTwitter: Bool = false
@@ -53,7 +52,7 @@ class Qard: NSObject, NSCoding {
         
         //all the strings
         coder.encodeObject(firstName, forKey: "firstName")
-        coder.encodeObject(lastName, forKey: "lastName")
+        coder.encodeObject(companyName, forKey: "companyName")
         coder.encodeObject(phoneNumber, forKey: "phoneNumber")
         coder.encodeObject(emailAddress, forKey: "emailAddress")
         coder.encodeObject(twitter, forKey: "twitter")
@@ -64,7 +63,7 @@ class Qard: NSObject, NSCoding {
         
         //all the bools
         coder.encodeBool(showFirstName, forKey: "showFirstName")
-        coder.encodeBool(showLastName, forKey: "showLastName")
+        coder.encodeBool(showCompanyName, forKey: "showCompanyName")
         coder.encodeBool(showPhoneNumber, forKey: "showPhoneNumber")
         coder.encodeBool(showEmailAddress, forKey: "showEmailAddress")
         coder.encodeBool(showTwitter, forKey: "showTwitter")
@@ -81,7 +80,7 @@ class Qard: NSObject, NSCoding {
         //decoder
     required convenience init?(coder decoder: NSCoder) {
         guard let firstName = decoder.decodeObjectForKey("firstName") as? String,
-            let lastName = decoder.decodeObjectForKey("lastName") as? String,
+            let companyName = decoder.decodeObjectForKey("companyName") as? String,
             let phoneNumber = decoder.decodeObjectForKey("phoneNumber") as? String,
             let emailAddress = decoder.decodeObjectForKey("emailAddress") as? String,
             let twitter = decoder.decodeObjectForKey("twitter") as? String,
@@ -95,10 +94,10 @@ class Qard: NSObject, NSCoding {
         }
         
         self.init(
-            first: firstName,
-            last: lastName
+            first: firstName
         )
         
+        self.companyName = companyName
         self.phoneNumber = phoneNumber
         self.emailAddress = emailAddress
         self.twitter = twitter
@@ -110,7 +109,7 @@ class Qard: NSObject, NSCoding {
         self.profileImage = UIImage(data: imageData!)!
         
         self.showFirstName = decoder.decodeBoolForKey("showFirstName")
-        self.showLastName = decoder.decodeBoolForKey("showLastName")
+        self.showCompanyName = decoder.decodeBoolForKey("showCompanyName")
         self.showPhoneNumber = decoder.decodeBoolForKey("showPhoneNumber")
         self.showEmailAddress = decoder.decodeBoolForKey("showEmailAddress")
         self.showTwitter = decoder.decodeBoolForKey("showTwitter")
@@ -127,7 +126,7 @@ class Qard: NSObject, NSCoding {
     func printStatuses(){
         print("\n========================================================")
         print("First Name: \(firstName) Status: \(showFirstName)")
-        print("Last Name: \(lastName) Status: \(showLastName)")
+        print("Last Name: \(companyName) Status: \(showCompanyName)")
         print("Phone Number: \(phoneNumber) Status: \(showPhoneNumber)")
         print("Email: \(emailAddress) Status: \(showEmailAddress)")
         print("Twitter: \(twitter) Status: \(showTwitter)")
@@ -154,8 +153,8 @@ class Qard: NSObject, NSCoding {
             contactJsonString += jsonify("first", value: firstName)
         }
         
-        if showLastName && lastName != "" {
-            contactJsonString += jsonify("last", value: lastName)
+        if showCompanyName && companyName != "" {
+            contactJsonString += jsonify("company", value: companyName)
         }
         if showPhoneNumber && phoneNumber != "" {
             contactJsonString += jsonify("number", value: phoneNumber)

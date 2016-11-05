@@ -46,7 +46,7 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel?.text = data.myQards[indexPath.row].firstName + " " + data.myQards[indexPath.row].lastName
+        cell.textLabel?.text = data.myQards[indexPath.row].firstName
         
         cell.imageView!.image = data.myQards[indexPath.row].profileImage
         
@@ -60,7 +60,7 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func addQard(sender: UIBarButtonItem) {
-        data.myQards.append(Qard(first: "First", last: "Last"))
+        data.myQards.append(Qard(first: "Firstname Lastname"))
         data.selectedQard = data.myQards[data.myQards.count-1]
         data.saveQards()
         qardTable.reloadData()

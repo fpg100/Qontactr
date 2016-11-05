@@ -15,7 +15,7 @@ class Data {
     static let sharedInstance = Data()
     init(){}
     
-    var selectedQard: Qard = Qard(first: "Dank", last: "Memes")
+    var selectedQard: Qard = Qard(first: "Dank Memington")
     var myQards: [Qard] = []
     
     //save current myQards array to user defaults
