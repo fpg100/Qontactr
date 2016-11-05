@@ -48,6 +48,8 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = data.myQards[indexPath.row].firstName
         
+        cell.detailTextLabel?.text = data.myQards[indexPath.row].companyName
+        
         cell.imageView!.image = data.myQards[indexPath.row].profileImage
         
         return cell
