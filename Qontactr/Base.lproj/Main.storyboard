@@ -127,7 +127,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4I-bp-fYB">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AiF-jH-iV6">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AiF-jH-iV6">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -158,7 +158,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-UN-sZ8">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNB-dl-UYm">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aNB-dl-UYm">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -189,7 +189,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCZ-67-LSP">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXT-w3-Ly8">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXT-w3-Ly8">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -221,7 +221,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-WP-Xvs">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Au-qGq">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Au-qGq">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -253,7 +253,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLi-fI-qF0">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Linkedin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-w0-I5c">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Linkedin" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qDr-w0-I5c">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -285,7 +285,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7f-WG-3AS">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Twitter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-aZ-KsV">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Twitter" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-aZ-KsV">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -317,7 +317,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkS-q7-lE1">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Facebook" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vek-dx-nx3">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Facebook" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Vek-dx-nx3">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -349,7 +349,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmG-7b-O4w">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-Xk-43A">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instagram" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-Xk-43A">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -380,7 +380,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-57-wOi">
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TFq-bi-5RE">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TFq-bi-5RE">
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -435,9 +435,6 @@
                                     <constraint firstAttribute="bottom" secondItem="fIC-aL-y6k" secondAttribute="bottom" id="SGm-Pf-Kf9"/>
                                     <constraint firstItem="fIC-aL-y6k" firstAttribute="leading" secondItem="EFh-GQ-6aN" secondAttribute="leading" id="yrB-yh-nrM"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7iL-Xu-soE" appends="YES" id="jae-3D-MOV"/>
-                                </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i2I-bm-zip">
                                 <constraints>
@@ -449,6 +446,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.34004400620000003" green="0.4221766354" blue="0.99965822699999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="EFh-GQ-6aN" firstAttribute="leading" secondItem="1gl-fr-gEC" secondAttribute="leading" id="3Wo-rc-MKW"/>
                             <constraint firstItem="EFh-GQ-6aN" firstAttribute="width" secondItem="1gl-fr-gEC" secondAttribute="width" id="8K1-rR-hBu"/>
@@ -467,7 +465,17 @@
                             <constraint firstItem="i2I-bm-zip" firstAttribute="top" secondItem="5Sr-Ts-ZgQ" secondAttribute="bottom" constant="8" id="qDP-LJ-aVH"/>
                             <constraint firstItem="nq1-8e-lL6" firstAttribute="centerY" secondItem="i2I-bm-zip" secondAttribute="centerY" id="tmB-8h-NfE"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5IR-FS-6Qu" appends="YES" id="sCC-qB-K66"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="My Qard" id="pLy-GW-J9j">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="xnP-hW-W2J">
+                            <connections>
+                                <action selector="helpButton:" destination="PoU-lA-9KY" id="aFL-KL-MBm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyNameField" destination="aNB-dl-UYm" id="BmK-GY-Zwu"/>
                         <outlet property="companyNameSwitch" destination="opr-b1-9zF" id="DyT-EO-SDV"/>
@@ -491,9 +499,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EaD-AZ-K7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="7iL-Xu-soE">
+                <tapGestureRecognizer id="5IR-FS-6Qu">
                     <connections>
-                        <action selector="tapAnywhere:" destination="PoU-lA-9KY" id="l9B-7Y-ALD"/>
+                        <action selector="tapAnywhere:" destination="PoU-lA-9KY" id="X0Z-NJ-7AF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -600,7 +608,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Qontactr" id="GoJ-II-bsf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Ggz-Oe-YOb">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="Ggz-Oe-YOb">
                             <connections>
                                 <action selector="profileSegueButton:" destination="f9f-Gk-aZn" id="Il3-55-YwO"/>
                             </connections>
@@ -730,11 +738,12 @@
         <image name="instagramIcon" width="123" height="123"/>
         <image name="linkedinIcon" width="225" height="225"/>
         <image name="phoneIcon" width="225" height="225"/>
+        <image name="settings" width="25" height="25"/>
         <image name="twitterIcon" width="179" height="119"/>
         <image name="websiteIcon" width="225" height="225"/>
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AY0-Bu-xk1"/>
+        <segue reference="CxN-9D-bEa"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -79,6 +79,12 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
             NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedQardArray")
             NSUserDefaults.standardUserDefaults().synchronize()
             
+            let rolodexArray: [Qard] = [data.selectedRolodexQard]
+            let encodedRolodexArray = NSKeyedArchiver.archivedDataWithRootObject(rolodexArray)
+            NSUserDefaults.standardUserDefaults().setObject(encodedRolodexArray, forKey: "encodedRolodexArray")
+            NSUserDefaults.standardUserDefaults().synchronize()
+
+            
             self.performSegueWithIdentifier("profileSegue", sender: nil)
             presentAlert("Welcome To Qontactr", message: "This is your Qontact Qard, enter your info and select what you want to display in your QR code")
         }
@@ -86,8 +92,15 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         let encodedQardArray = NSUserDefaults.standardUserDefaults().objectForKey("encodedQardArray") as! NSData
         let decodedQardArray = NSKeyedUnarchiver.unarchiveObjectWithData(encodedQardArray) as! [Qard]
         
+        let encodedRolodexArray = NSUserDefaults.standardUserDefaults().objectForKey("encodedRolodexArray") as! NSData
+        let decodedRolodexArray = NSKeyedUnarchiver.unarchiveObjectWithData(encodedRolodexArray) as! [Qard]
+
+        
         data.myQards = decodedQardArray
         data.selectedQard = data.myQards[0]
+        
+        data.qardRolodex = decodedRolodexArray
+        data.selectedRolodexQard = data.qardRolodex[0]
     }
     
     @IBAction func qardListButton(sender: AnyObject) {
@@ -115,6 +128,7 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         request.testDevices = data.testDevices
         bannerView.loadRequest(request)
         
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -124,7 +138,4 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         qrImage.image = data.selectedQard.contactQR()
     }
     
-    
-
-
 }

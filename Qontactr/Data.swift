@@ -17,6 +17,8 @@ class Data {
     
     var selectedQard: Qard = Qard(first: "Dank Memington")
     var myQards: [Qard] = []
+    var qardRolodex: [Qard] = []
+    var selectedRolodexQard: Qard = Qard(first: "Rolo Dex")
     
     //save current myQards array to user defaults
     func saveQards(){
@@ -27,6 +29,13 @@ class Data {
         
     }
     
+    func saveRolodex(){
+        let encodedQardArray = NSKeyedArchiver.archivedDataWithRootObject(qardRolodex)
+        NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedRolodexArray")
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    /*
     //contacts array for import reasons
     lazy var contacts: [CNContact] = {
         let contactStore = CNContactStore()
@@ -61,7 +70,7 @@ class Data {
         
         return results
     }()
-
+    */
     
     let testDevices: [AnyObject] = ["a602ccfafd871943181aea6dc7401ddf",kGADSimulatorID]
     //let testDevices: [AnyObject] = []

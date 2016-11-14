@@ -97,14 +97,29 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //one action for every switch
     @IBAction func switchToggled(sender: AnyObject) {
-        saveFormToQard(data.selectedQard)
+        saveQardInBackground()
     }
 
+    func saveQardInBackground(){
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            //in background queue
+            self.saveFormToQard(self.data.selectedQard)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                //in main queue
+                
+                
+            }
+        }
+    }
+    
     @IBAction func backButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func tapAnywhere(sender: AnyObject) {
+        saveQardInBackground()
         view.endEditing(true)
     }
     
@@ -119,6 +134,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         pickerController.allowsEditing = true
         
         let alertController = UIAlertController(title: "Change the Picture", message: "Choose From", preferredStyle: .ActionSheet)
+        
         let cameraAction = UIAlertAction(title: "Camera", style: .Default, handler: { (action) in
             pickerController.sourceType = .Camera
             self.presentViewController(pickerController, animated: true, completion: nil)
@@ -129,11 +145,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.presentViewController(pickerController, animated: true, completion: nil)
             
         })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        })
+        
         
         //alertController.addAction(cameraAction) //remove temp bc of rotation issues
         alertController.addAction(galleryAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(cancelAction)
         
         presentViewController(alertController, animated: true, completion: nil)
+        
+        saveQardInBackground()
         
     }
     
@@ -147,6 +172,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         saveFormToQard(data.selectedQard)
+    }
+    
+    @IBAction func helpButton(sender: AnyObject) {
+        print("User has asked for help")
     }
     
     override func viewDidLoad() {
