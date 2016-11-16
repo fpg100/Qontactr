@@ -571,6 +571,14 @@
                                     <constraint firstAttribute="width" secondItem="Sc7-c2-xrZ" secondAttribute="height" multiplier="1:1" id="b7Y-Lj-klv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-Yk-6dk">
+                                <frame key="frameInset" minX="273" minY="405" width="65" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rolodex" backgroundImage="whiteSquare"/>
+                                <connections>
+                                    <action selector="rolodexSegueButton:" destination="f9f-Gk-aZn" eventType="touchUpInside" id="gqE-A1-H0J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34004400616058328" green="0.42217663543695177" blue="0.99965822696685791" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>

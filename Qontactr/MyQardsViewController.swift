@@ -15,7 +15,12 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var qardTable: UITableView!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.myQards.count
+        if data.isMyQardsSelected {
+            return data.myQards.count
+        } else {
+            return data.qardRolodex.count
+        }
+        
     }
     
     //present an alert to the user
@@ -46,19 +51,38 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel?.text = data.myQards[indexPath.row].firstName
         
-        cell.detailTextLabel?.text = data.myQards[indexPath.row].companyName
+        if data.isMyQardsSelected {
+            cell.textLabel?.text = data.myQards[indexPath.row].firstName
+            
+            cell.detailTextLabel?.text = data.myQards[indexPath.row].companyName
+            
+            cell.imageView!.image = data.myQards[indexPath.row].profileImage
+        } else  {
+            cell.textLabel?.text = data.qardRolodex[indexPath.row].firstName
+            
+            cell.detailTextLabel?.text = data.qardRolodex[indexPath.row].companyName
+            
+            cell.imageView!.image = data.qardRolodex[indexPath.row].profileImage
+        }
         
-        cell.imageView!.image = data.myQards[indexPath.row].profileImage
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        data.selectedQard = data.myQards[indexPath.row]
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.navigationController?.popViewControllerAnimated(true)
+        
+        if data.isMyQardsSelected {
+            data.selectedQard = data.myQards[indexPath.row]
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            data.selectedRolodexQard = data.qardRolodex[indexPath.row]
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            presentAlert("Rolodex Qontact \(data.selectedRolodexQard.firstName) Selected", message: "")
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
     }
     
     @IBAction func addQard(sender: UIBarButtonItem) {
@@ -78,15 +102,20 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
      
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.Destructive, title: "Delete", handler: {(action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
             
-            if self.data.myQards.count > 1 {
-                self.data.myQards.removeAtIndex(indexPath.row)
-                self.qardTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
-                self.data.selectedQard = self.data.myQards[0]
-                self.data.saveQards()
-    
+            if self.data.isMyQardsSelected {
+                if self.data.myQards.count > 1 {
+                    self.data.myQards.removeAtIndex(indexPath.row)
+                    self.qardTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                    self.data.selectedQard = self.data.myQards[0]
+                    self.data.saveQards()
+                    
+                } else {
+                    print("Attempt to delete last Qontact denied")
+                    self.presentAlert("Can't Delete", message: "You must have at least 1 Qard.  You can always edit it.")
+                }
+ 
             } else {
-                print("Attempt to delete last Qontact denied")
-                self.presentAlert("Can't Delete", message: "You must have at least 1 Qard.  You can always edit it.")
+                print("delete feature not implemented yet")
             }
         })
         
@@ -97,7 +126,16 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         })
         
-        return [editAction, deleteAction]
+        var actionArray: [UITableViewRowAction] = []
+        
+        if data.isMyQardsSelected {
+            actionArray = [editAction, deleteAction]
+        } else {
+            actionArray = [deleteAction]
+        }
+        
+
+        return actionArray
         
     }
 

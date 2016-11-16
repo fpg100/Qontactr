@@ -55,6 +55,11 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     @IBAction func profileSegueButton(sender: AnyObject) {
         self.performSegueWithIdentifier("profileSegue", sender: UIButton.self)
     }
+    @IBAction func rolodexSegueButton(sender: AnyObject) {
+        data.isMyQardsSelected = false
+        self.performSegueWithIdentifier("qardListSegue", sender: UIButton.self)
+    }
+    
     
     //present an alert to the user
     func presentAlert(title: String, message: String) {
@@ -104,6 +109,7 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func qardListButton(sender: AnyObject) {
+        data.isMyQardsSelected = true
         self.performSegueWithIdentifier("qardListSegue", sender: UIButton.self)
     }
     
@@ -130,6 +136,7 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         
         
     }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)

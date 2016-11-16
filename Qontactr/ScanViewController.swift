@@ -78,6 +78,36 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
                 qontactString.removeRange(range)
                 
                 self.presentAlert("QR Scanned", message: qontactString)
+                
+                let stringData: NSData = qontactString.dataUsingEncoding(NSUTF8StringEncoding)!
+                let json = JSON(data: stringData)
+                
+                //parse this JSON data into local variables
+                let first = json["first"].stringValue
+                let company = json["company"].stringValue
+                let number = json["number"].stringValue
+                let linkedin = json["linkedin"].stringValue
+                let twitter = json["twitter"].stringValue
+                let facebook = json["facebook"].stringValue
+                let instagram = json["instagram"].stringValue
+                let website = json["website"].stringValue
+                
+                let newQard = Qard(first: first)
+                
+                newQard.companyName = company
+                newQard.phoneNumber = number
+                newQard.linkedin = linkedin
+                newQard.twitter = twitter
+                newQard.facebook = facebook
+                newQard.instagram = instagram
+                newQard.website = website
+                
+                self.data.qardRolodex.append(newQard)
+                
+                self.data.saveRolodex()
+                
+                
+                
             } else {
                 self.presentAlert("Not a Qontactr QR Code", message: stringValue)
             }

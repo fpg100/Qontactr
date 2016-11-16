@@ -20,6 +20,7 @@
 		52B488ED1D7CD96B00015A9A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488EC1D7CD96B00015A9A /* Data.swift */; };
 		52B488EF1D7CDA6100015A9A /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488EE1D7CDA6100015A9A /* ScanViewController.swift */; };
 		52B488F21D7CECE700015A9A /* QRGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */; };
+		52CC55E71DDC0929003C4587 /* RolodexQardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC55E61DDC0929003C4587 /* RolodexQardViewController.swift */; };
 		A115044304022A07224CACF8 /* Pods_QontactrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E6431977788268AF9C2036 /* Pods_QontactrUITests.framework */; };
 		A9E65EB9C857241D58A427C9 /* Pods_QontactrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42FCB54FBACBE1DD060E69 /* Pods_QontactrTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		52B488EC1D7CD96B00015A9A /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		52B488EE1D7CDA6100015A9A /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGeneratorViewController.swift; sourceTree = "<group>"; };
+		52CC55E61DDC0929003C4587 /* RolodexQardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolodexQardViewController.swift; sourceTree = "<group>"; };
 		5C2DB87FD17D4EB15950598F /* Pods-QontactrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QontactrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QontactrUITests/Pods-QontactrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CF67DEAEC9F5F6D7D3C8D0A /* Pods_Qontactr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qontactr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		609528FAB6F5776832D08B66 /* Pods-Qontactr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qontactr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qontactr/Pods-Qontactr.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		52054C5F1DCE730500478107 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52CC55E61DDC0929003C4587 /* RolodexQardViewController.swift */,
 				52B488EE1D7CDA6100015A9A /* ScanViewController.swift */,
 				52A3903D1DC14842001C071C /* ProfileViewController.swift */,
 				52B488F11D7CECE700015A9A /* QRGeneratorViewController.swift */,
@@ -466,6 +469,7 @@
 				5268D3DE1D7CD1D30071CD56 /* AppDelegate.swift in Sources */,
 				52B488EF1D7CDA6100015A9A /* ScanViewController.swift in Sources */,
 				52B488F21D7CECE700015A9A /* QRGeneratorViewController.swift in Sources */,
+				52CC55E71DDC0929003C4587 /* RolodexQardViewController.swift in Sources */,
 				527E32481DC55A5700D29756 /* MyQardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,8 @@ class Data {
     var qardRolodex: [Qard] = []
     var selectedRolodexQard: Qard = Qard(first: "Rolo Dex")
     
+    var isMyQardsSelected: Bool = true
+    
     //save current myQards array to user defaults
     func saveQards(){
         
