@@ -147,7 +147,7 @@ class Qard: NSObject, NSCoding {
     }
     
     func contactQR() -> UIImage {
-        var contactJsonString = "http://cointrak.me/{"
+        var contactJsonString = "http://cointrak.me/qontactr/{"
         
         //append the json string with data if and only if the value isnt blank and the slider is set to yes
         if showFirstName && firstName != "" {
