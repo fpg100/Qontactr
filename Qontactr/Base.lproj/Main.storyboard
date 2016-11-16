@@ -89,7 +89,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742" y="1165"/>
+            <point key="canvasLocation" x="2742" y="1562"/>
+        </scene>
+        <!--Rolodex Qard View Controller-->
+        <scene sceneID="7M2-HD-8Bi">
+            <objects>
+                <viewController id="UPc-1A-zeV" customClass="RolodexQardViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TXf-Ex-xNm"/>
+                        <viewControllerLayoutGuide type="bottom" id="LKV-y6-Ryb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCr-ek-Hth">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae9-zu-LXs">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ae9-zu-LXs" firstAttribute="leading" secondItem="SCr-ek-Hth" secondAttribute="leadingMargin" id="CIt-cz-4wj"/>
+                            <constraint firstItem="ae9-zu-LXs" firstAttribute="top" secondItem="TXf-Ex-xNm" secondAttribute="bottom" constant="8" symbolic="YES" id="Gwg-uC-JLh"/>
+                            <constraint firstItem="ae9-zu-LXs" firstAttribute="trailing" secondItem="SCr-ek-Hth" secondAttribute="trailingMargin" id="UWf-T2-1Hs"/>
+                            <constraint firstItem="LKV-y6-Ryb" firstAttribute="top" secondItem="ae9-zu-LXs" secondAttribute="bottom" constant="323" id="wi0-oF-kgf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testLabel" destination="ae9-zu-LXs" id="FDW-32-zkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmm-EB-kdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4308" y="1163.568215892054"/>
         </scene>
         <!--My Qard-->
         <scene sceneID="0w7-MK-MR8">
@@ -714,6 +748,8 @@
                     <connections>
                         <outlet property="qardTable" destination="uJl-5x-p2a" id="yAD-i0-lRI"/>
                         <segue destination="PoU-lA-9KY" kind="show" identifier="myQardsToEdit" id="AY0-Bu-xk1"/>
+                        <segue destination="UPc-1A-zeV" kind="show" identifier="myQardsToView" id="vp8-Xy-FOf"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="myQardsToScan" id="1tX-As-P20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg1-VP-rwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -752,6 +788,7 @@
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CxN-9D-bEa"/>
+        <segue reference="1tX-As-P20"/>
+        <segue reference="AY0-Bu-xk1"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -86,6 +86,7 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
                 let first = json["first"].stringValue
                 let company = json["company"].stringValue
                 let number = json["number"].stringValue
+                let email = json["email"].stringValue
                 let linkedin = json["linkedin"].stringValue
                 let twitter = json["twitter"].stringValue
                 let facebook = json["facebook"].stringValue
@@ -96,6 +97,7 @@ class ScanViewController: UIViewController, GADBannerViewDelegate {
                 
                 newQard.companyName = company
                 newQard.phoneNumber = number
+                newQard.emailAddress = email
                 newQard.linkedin = linkedin
                 newQard.twitter = twitter
                 newQard.facebook = facebook

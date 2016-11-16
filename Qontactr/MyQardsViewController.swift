@@ -79,17 +79,24 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             data.selectedRolodexQard = data.qardRolodex[indexPath.row]
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            presentAlert("Rolodex Qontact \(data.selectedRolodexQard.firstName) Selected", message: "")
-            self.navigationController?.popViewControllerAnimated(true)
+            
+            self.performSegueWithIdentifier("myQardsToView", sender: UITableViewCell.self)
+            
+            //presentAlert("Rolodex Qontact \(data.selectedRolodexQard.firstName) Selected", message: "")
         }
         
     }
     
     @IBAction func addQard(sender: UIBarButtonItem) {
-        data.myQards.append(Qard(first: "Firstname Lastname"))
-        data.selectedQard = data.myQards[data.myQards.count-1]
-        data.saveQards()
-        self.performSegueWithIdentifier("myQardsToEdit", sender: UIBarButtonItem.self)
+        if data.isMyQardsSelected {
+            data.myQards.append(Qard(first: "Firstname Lastname"))
+            data.selectedQard = data.myQards[data.myQards.count-1]
+            data.saveQards()
+            self.performSegueWithIdentifier("myQardsToEdit", sender: UIBarButtonItem.self)
+        } else {
+            self.performSegueWithIdentifier("myQardsToScan", sender: UIBarButtonItem.self)
+        }
+        
         
     }
     
@@ -115,7 +122,15 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
  
             } else {
-                print("delete feature not implemented yet")
+                if self.data.qardRolodex.count > 1 {
+                    self.data.qardRolodex.removeAtIndex(indexPath.row)
+                    self.qardTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                    self.data.selectedRolodexQard = self.data.qardRolodex[0]
+                    self.data.saveRolodex()
+                } else {
+                    print("Attempt to delete last Rolodex Qard Denied")
+                    self.presentAlert("Can't Delete", message: "You must have at least 1 Qard.")
+                }
             }
         })
         
