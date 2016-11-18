@@ -125,9 +125,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-kc-Tdy">
-                                <frame key="frameInset" minX="16" minY="218" width="343" height="429"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-kc-Tdy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="oVC-As-mNd" detailTextLabel="Hg0-NO-lJp" style="IBUITableViewCellStyleSubtitle" id="59G-c6-rk7">
@@ -164,12 +162,17 @@
                             <constraint firstItem="wnS-qz-OQc" firstAttribute="top" secondItem="i7l-yd-h1G" secondAttribute="bottom" constant="8" symbolic="YES" id="7eG-Ts-McA"/>
                             <constraint firstItem="gMk-4o-veE" firstAttribute="top" secondItem="wnS-qz-OQc" secondAttribute="bottom" constant="37" id="Fmy-qT-eb9"/>
                             <constraint firstItem="i7l-yd-h1G" firstAttribute="top" secondItem="SCr-ek-Hth" secondAttribute="top" id="SV9-rC-8Nz"/>
+                            <constraint firstItem="LKV-y6-Ryb" firstAttribute="top" secondItem="RMt-kc-Tdy" secondAttribute="bottom" constant="20" id="WGS-zy-gk7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RMt-kc-Tdy" secondAttribute="trailing" id="WnW-0o-BEC"/>
                             <constraint firstItem="8fX-TX-ndS" firstAttribute="leading" secondItem="SCr-ek-Hth" secondAttribute="leadingMargin" id="Yjb-Mx-LIA"/>
                             <constraint firstItem="wnS-qz-OQc" firstAttribute="top" secondItem="TXf-Ex-xNm" secondAttribute="bottom" constant="8" symbolic="YES" id="b7h-3U-Jiw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RMt-kc-Tdy" secondAttribute="leading" id="eTI-7A-9yf"/>
                             <constraint firstAttribute="trailing" secondItem="i7l-yd-h1G" secondAttribute="trailing" id="eyr-7u-ldg"/>
                             <constraint firstItem="i7l-yd-h1G" firstAttribute="centerX" secondItem="wnS-qz-OQc" secondAttribute="centerX" id="f0Q-gp-rT0"/>
                             <constraint firstItem="wnS-qz-OQc" firstAttribute="centerX" secondItem="8fX-TX-ndS" secondAttribute="centerX" id="hOz-Yf-SD7"/>
                             <constraint firstItem="8fX-TX-ndS" firstAttribute="leading" secondItem="gMk-4o-veE" secondAttribute="leading" id="jJv-gl-ShM"/>
+                            <constraint firstItem="RMt-kc-Tdy" firstAttribute="top" secondItem="gMk-4o-veE" secondAttribute="bottom" constant="8" id="qqT-dG-DCk"/>
+                            <constraint firstItem="RMt-kc-Tdy" firstAttribute="centerX" secondItem="SCr-ek-Hth" secondAttribute="centerX" id="v8k-0p-mVK"/>
                             <constraint firstItem="8fX-TX-ndS" firstAttribute="trailing" secondItem="gMk-4o-veE" secondAttribute="trailing" id="xfU-48-KIy"/>
                         </constraints>
                     </view>

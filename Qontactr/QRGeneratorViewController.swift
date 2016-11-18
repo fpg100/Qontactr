@@ -84,6 +84,13 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
             NSUserDefaults.standardUserDefaults().setObject(encodedQardArray, forKey: "encodedQardArray")
             NSUserDefaults.standardUserDefaults().synchronize()
             
+            data.selectedRolodexQard.companyName = "CoinTrak"
+            data.selectedRolodexQard.emailAddress = "jchiaramonte18@regis.org"
+            data.selectedRolodexQard.linkedin = "john-c-b5114b130"
+            data.selectedRolodexQard.twitter = "jchiaramonte_"
+            data.selectedRolodexQard.facebook = "josiah.melo.7"
+            data.selectedRolodexQard.instagram = "jchiaramonte_"
+            data.selectedRolodexQard.website = "cointrak.me"
             let rolodexArray: [Qard] = [data.selectedRolodexQard]
             let encodedRolodexArray = NSKeyedArchiver.archivedDataWithRootObject(rolodexArray)
             NSUserDefaults.standardUserDefaults().setObject(encodedRolodexArray, forKey: "encodedRolodexArray")

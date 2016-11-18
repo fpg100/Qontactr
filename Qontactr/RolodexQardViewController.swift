@@ -94,7 +94,7 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
         
         infoTable.delegate = self
         infoTable.dataSource = self
-        infoTable.rowHeight = infoTable.bounds.height / 7
+        infoTable.rowHeight = infoTable.bounds.height / 21
         
 
         

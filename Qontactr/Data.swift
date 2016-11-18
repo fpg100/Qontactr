@@ -15,10 +15,10 @@ class Data {
     static let sharedInstance = Data()
     init(){}
     
-    var selectedQard: Qard = Qard(first: "Dank Memington")
+    var selectedQard: Qard = Qard(first: "Your Name Here")
     var myQards: [Qard] = []
     var qardRolodex: [Qard] = []
-    var selectedRolodexQard: Qard = Qard(first: "Rolo Dex")
+    var selectedRolodexQard: Qard = Qard(first: "John Chiaramonte")
     
     var isMyQardsSelected: Bool = true
     
