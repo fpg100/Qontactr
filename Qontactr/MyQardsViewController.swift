@@ -63,7 +63,7 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             cell.detailTextLabel?.text = data.qardRolodex[indexPath.row].companyName
             
-            cell.imageView!.image = data.qardRolodex[indexPath.row].profileImage
+            //cell.imageView!.image = data.qardRolodex[indexPath.row].profileImage
         }
         
         
