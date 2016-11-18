@@ -192,4 +192,30 @@ class Qard: NSObject, NSCoding {
         
     }
     
+    func phoneLink() -> String {
+        return "tel:\(phoneNumber)"
+    }
+    func emailLink() -> String {
+        return "mailto:\(emailAddress)"
+    }
+    func linkedInLink() -> String {
+        return "http://linkedin.com/in/\(linkedin)"
+    }
+    func twitterLink() -> String {
+        return "http://twitter.com/\(twitter)"
+    }
+    func facebookLink() -> String {
+        return "http://facebook.com/\(facebook)"
+    }
+    func instagramLink() -> String {
+        return "http://instagram.com/\(instagram)"
+    }
+    func websiteLink() -> String {
+        if website.hasPrefix("http://") && website.hasPrefix("https://") {
+            return website
+        } else {
+            return "http://\(website)"
+        }
+    }
+    
 }

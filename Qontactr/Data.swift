@@ -112,4 +112,11 @@ class Data {
         return image
     }
     
+    func openURL(url: String) {
+        
+        let url = NSURL(string: url)!
+        UIApplication.sharedApplication().openURL(url)
+        
+    }
+    
 }

@@ -20,6 +20,7 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
     
     var titles: [String] = []
     var values: [String] = []
+    var links: [String] = []
 
     
     func loadQardToForm(qard: Qard) {
@@ -35,30 +36,37 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
         if qard.phoneNumber != "" {
             values.append(qard.phoneNumber)
             titles.append("Phone Number")
+            links.append(qard.phoneLink())
         }
         if qard.emailAddress != "" {
             values.append(qard.emailAddress)
             titles.append("Email Address")
+            links.append(qard.emailLink())
         }
         if qard.linkedin != "" {
             values.append(qard.linkedin)
             titles.append("Linkedin")
+            links.append(qard.linkedInLink())
         }
         if qard.twitter != "" {
             values.append(qard.twitter)
             titles.append("Twitter")
+            links.append(qard.twitterLink())
         }
         if qard.facebook != "" {
             values.append(qard.facebook)
             titles.append("Facebook")
+            links.append(qard.facebookLink())
         }
         if qard.instagram != "" {
             values.append(qard.instagram)
             titles.append("Instagram")
+            links.append(qard.instagramLink())
         }
         if qard.website != "" {
             values.append(qard.website)
             titles.append("Website")
+            links.append(qard.websiteLink())
         }
     }
     
@@ -72,6 +80,10 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
         cell.detailTextLabel!.text = titles[indexPath.row]
         
         return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        data.openURL(links[indexPath.row])
     }
     
     override func viewDidLoad() {
