@@ -119,4 +119,29 @@ class Data {
         
     }
     
+    func addContactFromQard(qard: Qard){
+        let newContact = CNMutableContact()
+        
+        newContact.givenName = qard.firstName
+        
+        if qard.phoneNumber != "" {
+            let cnPhoneNumber = CNLabeledValue(label: CNLabelPhoneNumberMobile, value: CNPhoneNumber(stringValue: qard.phoneNumber))
+            newContact.phoneNumbers = [cnPhoneNumber]
+        }
+        
+        if qard.emailAddress != "" {
+            let cnEmailAddress = CNLabeledValue(label: "Email", value: qard.emailAddress)
+            newContact.emailAddresses = [cnEmailAddress]
+        }
+        
+        if qard.companyName != "" {
+            newContact.organizationName = qard.companyName
+        }
+        
+        let store = CNContactStore()
+        let saveRequest = CNSaveRequest()
+        saveRequest.addContact(newContact, toContainerWithIdentifier:nil)
+        try! store.executeSaveRequest(saveRequest)
+    }
+    
 }

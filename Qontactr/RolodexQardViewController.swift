@@ -34,11 +34,20 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     //adds the Qontact info into your iPhone Contacts
-    func qontactToContact(){
+    func qontactToContact(qard: Qard){
+        let alertController = UIAlertController(title: "Add \(qard.firstName) To Contacts?", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
+            
+            self.data.addContactFromQard(qard)
+            
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive, handler: nil))
         
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     @IBAction func addToContactsButton(sender: AnyObject) {
+        qontactToContact(data.selectedRolodexQard)
     }
     
     func setupArrays(qard: Qard) {
@@ -106,13 +115,9 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
             loadQardToForm(data.selectedRolodexQard)
         }
 
-        
         infoTable.delegate = self
         infoTable.dataSource = self
         infoTable.rowHeight = infoTable.bounds.height / (7*(2 + ( 1/3 )))
-        
-        
-
         
         print("====================================")
         print("\(data.selectedRolodexQard.firstName)\n\(data.selectedRolodexQard.companyName)\n\(data.selectedRolodexQard.phoneNumber)\n\(data.selectedRolodexQard.emailAddress)\n\(data.selectedRolodexQard.linkedin)\n\(data.selectedRolodexQard.twitter)\n\(data.selectedRolodexQard.facebook)\n\(data.selectedRolodexQard.instagram)\n\(data.selectedRolodexQard.website)")
