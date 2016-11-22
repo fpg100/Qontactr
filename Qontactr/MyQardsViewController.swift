@@ -14,6 +14,8 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var qardTable: UITableView!
     
+    @IBOutlet var navBar: UINavigationItem!
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if data.isMyQardsSelected {
             return data.myQards.count
@@ -157,7 +159,12 @@ class MyQardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if data.isMyQardsSelected {
+            navBar.title = "My Qards"
+        } else {
+            navBar.title = "Rolodex"
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {

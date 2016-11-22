@@ -29,6 +29,10 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     
     //saves whatever image is on qrimage imageview after alert prompt
     @IBAction func saveQRPhotoButton(sender: UIButton) {
+        saveQrPhotoToCameraRoll()
+    }
+    
+    func saveQrPhotoToCameraRoll() {
         let alertController = UIAlertController(title: "Save QR code to camera roll?", message:
             nil, preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -36,17 +40,16 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
             
             print("QR Photo saved to camera roll")
             UIImageWriteToSavedPhotosAlbum(self.qrImage.image!, nil, nil, nil)
-        
+            
         }))
-
+        
         alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default,handler: {(alert: UIAlertAction!) in
             
             print("User denied saving to camera roll")
             
         }))
-    
+        
         self.presentViewController(alertController, animated: true, completion: nil)
-    
     }
     
     @IBAction func scanSegueButton(sender: AnyObject) {
@@ -59,6 +62,8 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         data.isMyQardsSelected = false
         self.performSegueWithIdentifier("qardListSegue", sender: UIButton.self)
     }
+    
+
     
     
     //present an alert to the user
@@ -119,6 +124,9 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
         data.isMyQardsSelected = true
         self.performSegueWithIdentifier("qardListSegue", sender: UIButton.self)
     }
+    
+    //segue for reference
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
 
     override func viewDidLoad() {

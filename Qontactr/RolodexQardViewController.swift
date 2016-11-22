@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Contacts
 
 class RolodexQardViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -30,6 +31,14 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
         profileImageView.image = qard.profileImage
         
         
+    }
+    
+    //adds the Qontact info into your iPhone Contacts
+    func qontactToContact(){
+        
+    }
+    
+    @IBAction func addToContactsButton(sender: AnyObject) {
     }
     
     func setupArrays(qard: Qard) {
@@ -89,8 +98,14 @@ class RolodexQardViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupArrays(data.selectedRolodexQard)
-        loadQardToForm(data.selectedRolodexQard)
+        if data.isMyQardsSelected {
+            setupArrays(data.selectedQard)
+            loadQardToForm(data.selectedQard)
+        } else {
+            setupArrays(data.selectedRolodexQard)
+            loadQardToForm(data.selectedRolodexQard)
+        }
+
         
         infoTable.delegate = self
         infoTable.dataSource = self

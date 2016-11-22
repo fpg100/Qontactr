@@ -154,13 +154,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zI-nS-nIg">
+                                <state key="normal" title="Add to Contacts" backgroundImage="whiteSquare"/>
+                                <connections>
+                                    <action selector="addToContactsButton:" destination="UPc-1A-zeV" eventType="touchUpInside" id="cen-70-HHO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.34004400620000003" green="0.4221766354" blue="0.99965822699999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="9zI-nS-nIg" firstAttribute="leading" secondItem="SCr-ek-Hth" secondAttribute="leadingMargin" constant="-5" id="2WY-ZE-0vJ"/>
                             <constraint firstItem="i7l-yd-h1G" firstAttribute="leading" secondItem="SCr-ek-Hth" secondAttribute="leading" id="4Ml-8Y-7mT"/>
                             <constraint firstItem="8fX-TX-ndS" firstAttribute="top" secondItem="wnS-qz-OQc" secondAttribute="bottom" constant="8" symbolic="YES" id="5FH-kZ-5c0"/>
                             <constraint firstItem="wnS-qz-OQc" firstAttribute="top" secondItem="i7l-yd-h1G" secondAttribute="bottom" constant="8" symbolic="YES" id="7eG-Ts-McA"/>
+                            <constraint firstItem="8fX-TX-ndS" firstAttribute="top" secondItem="9zI-nS-nIg" secondAttribute="bottom" constant="8" symbolic="YES" id="BLd-E5-pwN"/>
                             <constraint firstItem="gMk-4o-veE" firstAttribute="top" secondItem="wnS-qz-OQc" secondAttribute="bottom" constant="37" id="Fmy-qT-eb9"/>
+                            <constraint firstItem="wnS-qz-OQc" firstAttribute="leading" secondItem="9zI-nS-nIg" secondAttribute="trailing" constant="9" id="JNM-PN-hbm"/>
+                            <constraint firstItem="9zI-nS-nIg" firstAttribute="top" secondItem="TXf-Ex-xNm" secondAttribute="bottom" constant="38" id="OSs-0n-6I4"/>
                             <constraint firstItem="i7l-yd-h1G" firstAttribute="top" secondItem="SCr-ek-Hth" secondAttribute="top" id="SV9-rC-8Nz"/>
                             <constraint firstItem="LKV-y6-Ryb" firstAttribute="top" secondItem="RMt-kc-Tdy" secondAttribute="bottom" constant="20" id="WGS-zy-gk7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RMt-kc-Tdy" secondAttribute="trailing" id="WnW-0o-BEC"/>
@@ -732,7 +742,7 @@
             </objects>
             <point key="canvasLocation" x="2741.5999999999999" y="449.32533733133437"/>
         </scene>
-        <!--My Qards-->
+        <!--My Qards / Rolodex-->
         <scene sceneID="ZCu-br-RTL">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="wrC-LD-rls" customClass="MyQardsViewController" customModule="Qontactr" customModuleProvider="target" sceneMemberID="viewController">
@@ -752,21 +762,21 @@
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fuV-10-4WB" detailTextLabel="c0H-zQ-3gs" style="IBUITableViewCellStyleSubtitle" id="D9B-Va-7qZ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9B-Va-7qZ" id="R8J-HU-R7Q">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="1000" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fuV-10-4WB">
-                                                    <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="164" minY="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0H-zQ-3gs">
-                                                    <frame key="frameInset" minX="15" minY="25" width="41" height="14"/>
+                                                    <frame key="frameInset" minX="164" minY="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -795,7 +805,7 @@
                             <constraint firstItem="Omv-pY-Dd6" firstAttribute="bottom" secondItem="gBx-i9-5X1" secondAttribute="bottom" id="pRi-Jx-QGt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Qards" id="YQb-Ad-s0V">
+                    <navigationItem key="navigationItem" title="My Qards / Rolodex" id="YQb-Ad-s0V">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pgf-GJ-bqq">
                             <connections>
                                 <action selector="addQard:" destination="wrC-LD-rls" id="cFm-ja-igX"/>
@@ -803,6 +813,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBar" destination="YQb-Ad-s0V" id="fYY-pI-lx2"/>
                         <outlet property="qardTable" destination="uJl-5x-p2a" id="yAD-i0-lRI"/>
                         <segue destination="PoU-lA-9KY" kind="show" identifier="myQardsToEdit" id="AY0-Bu-xk1"/>
                         <segue destination="UPc-1A-zeV" kind="show" identifier="myQardsToView" id="vp8-Xy-FOf"/>
