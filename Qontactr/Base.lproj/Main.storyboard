@@ -638,13 +638,10 @@
                                     <constraint firstAttribute="height" constant="50" id="rGN-nV-dhm"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yor-IY-snI">
-                                <state key="normal" title="Save" backgroundImage="whiteSquare"/>
-                                <connections>
-                                    <action selector="saveQRPhotoButton:" destination="f9f-Gk-aZn" eventType="touchUpInside" id="lcO-Ni-EQE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6y-Gj-jeg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="snO-rB-OgN"/>
+                                </constraints>
                                 <state key="normal" title="Scan" backgroundImage="whiteSquare"/>
                                 <connections>
                                     <action selector="scanSegueButton:" destination="f9f-Gk-aZn" eventType="touchUpInside" id="5Bd-ko-Lbf"/>
@@ -655,7 +652,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7P-s5-nJk">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="zAt-pt-Fnd"/>
+                                    <constraint firstAttribute="height" constant="45" id="kc5-yv-K8j"/>
                                 </constraints>
                                 <state key="normal" title="My Qards" backgroundImage="whiteSquare"/>
                                 <connections>
@@ -672,14 +669,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sc7-c2-xrZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qontactrappicon" translatesAutoresizingMaskIntoConstraints="NO" id="Sc7-c2-xrZ">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sc7-c2-xrZ" secondAttribute="height" multiplier="1:1" id="b7Y-Lj-klv"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-Yk-6dk">
-                                <frame key="frameInset" minX="273" minY="405" width="65" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-Yk-6dk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vgU-br-ZKf"/>
+                                </constraints>
                                 <state key="normal" title="Rolodex" backgroundImage="whiteSquare"/>
                                 <connections>
                                     <action selector="rolodexSegueButton:" destination="f9f-Gk-aZn" eventType="touchUpInside" id="gqE-A1-H0J"/>
@@ -689,39 +687,40 @@
                         <color key="backgroundColor" red="0.34004400616058328" green="0.42217663543695177" blue="0.99965822696685791" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Yor-IY-snI" firstAttribute="width" secondItem="L7P-s5-nJk" secondAttribute="width" id="22o-Cw-A18"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="top" secondItem="tLl-Hp-0rV" secondAttribute="bottom" constant="8" id="4rf-4g-04f"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="leading" secondItem="IlH-Yk-6dk" secondAttribute="leading" id="4kU-i2-QPY"/>
                             <constraint firstItem="96E-Qu-oOs" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="CqN-K9-hcJ"/>
-                            <constraint firstItem="Y6y-Gj-jeg" firstAttribute="width" secondItem="Yor-IY-snI" secondAttribute="width" id="Dfu-lS-sHh"/>
-                            <constraint firstItem="tLl-Hp-0rV" firstAttribute="top" secondItem="Sc7-c2-xrZ" secondAttribute="bottom" constant="34" id="HZG-ls-PtT"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="leading" secondItem="Yor-IY-snI" secondAttribute="leading" id="HdR-Vg-90C"/>
-                            <constraint firstItem="Y6y-Gj-jeg" firstAttribute="top" secondItem="Yor-IY-snI" secondAttribute="bottom" constant="8" symbolic="YES" id="HrA-P2-v4h"/>
-                            <constraint firstItem="JsC-mQ-rsA" firstAttribute="top" secondItem="Y6y-Gj-jeg" secondAttribute="bottom" constant="8" symbolic="YES" id="IK3-Fs-QtV"/>
-                            <constraint firstItem="Y6y-Gj-jeg" firstAttribute="height" secondItem="Yor-IY-snI" secondAttribute="height" id="NxF-LT-3QZ"/>
+                            <constraint firstItem="Y6y-Gj-jeg" firstAttribute="top" secondItem="IlH-Yk-6dk" secondAttribute="bottom" constant="8" symbolic="YES" id="Gnj-9V-bf8"/>
+                            <constraint firstItem="tLl-Hp-0rV" firstAttribute="top" secondItem="Sc7-c2-xrZ" secondAttribute="bottom" constant="29" id="HZG-ls-PtT"/>
+                            <constraint firstItem="IlH-Yk-6dk" firstAttribute="top" secondItem="L7P-s5-nJk" secondAttribute="bottom" constant="8" symbolic="YES" id="MSC-pc-QkV"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="centerX" secondItem="tLl-Hp-0rV" secondAttribute="centerX" id="NG3-3g-Eac"/>
                             <constraint firstItem="vcF-MV-leV" firstAttribute="leading" secondItem="y6v-I1-Ne5" secondAttribute="leading" id="PJy-t7-fsO"/>
                             <constraint firstItem="biD-sI-hwY" firstAttribute="top" secondItem="JsC-mQ-rsA" secondAttribute="bottom" id="Rib-b7-s44"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="leading" secondItem="y6v-I1-Ne5" secondAttribute="leadingMargin" constant="21" id="XG4-eG-BkS"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="cFl-r7-RrL"/>
-                            <constraint firstItem="Yor-IY-snI" firstAttribute="top" secondItem="L7P-s5-nJk" secondAttribute="bottom" constant="8" symbolic="YES" id="eNb-IL-Oj4"/>
+                            <constraint firstItem="Sc7-c2-xrZ" firstAttribute="leading" secondItem="y6v-I1-Ne5" secondAttribute="leadingMargin" constant="16" id="ShR-D2-OSH"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="centerX" secondItem="vcF-MV-leV" secondAttribute="centerX" id="Uo5-c6-X5c"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="centerX" secondItem="IlH-Yk-6dk" secondAttribute="centerX" id="Uzt-Uc-xbJ"/>
                             <constraint firstItem="biD-sI-hwY" firstAttribute="top" secondItem="96E-Qu-oOs" secondAttribute="bottom" id="euQ-CD-L8C"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="centerX" secondItem="vcF-MV-leV" secondAttribute="centerX" id="g03-pd-QyV"/>
                             <constraint firstItem="vcF-MV-leV" firstAttribute="top" secondItem="y6v-I1-Ne5" secondAttribute="top" id="g1d-Ae-SYy"/>
                             <constraint firstItem="JsC-mQ-rsA" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="gSv-71-Fno"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="top" secondItem="Sc7-c2-xrZ" secondAttribute="bottom" constant="66" id="kbE-LG-26k"/>
+                            <constraint firstItem="IlH-Yk-6dk" firstAttribute="trailing" secondItem="Y6y-Gj-jeg" secondAttribute="trailing" id="gtI-MP-n63"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="top" secondItem="tLl-Hp-0rV" secondAttribute="bottom" constant="8" id="lsz-3F-RqI"/>
                             <constraint firstItem="Sc7-c2-xrZ" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="oMb-mH-wUP"/>
-                            <constraint firstItem="Yor-IY-snI" firstAttribute="leading" secondItem="Y6y-Gj-jeg" secondAttribute="leading" id="or7-IV-7eU"/>
                             <constraint firstItem="vcF-MV-leV" firstAttribute="bottom" secondItem="11E-UZ-zqd" secondAttribute="bottom" id="osI-Np-g0z"/>
                             <constraint firstItem="e0O-gN-fgG" firstAttribute="leading" secondItem="tLl-Hp-0rV" secondAttribute="leading" id="p2P-bl-qsg"/>
                             <constraint firstItem="Sc7-c2-xrZ" firstAttribute="top" secondItem="11E-UZ-zqd" secondAttribute="bottom" constant="28" id="q8w-J8-CPy"/>
-                            <constraint firstItem="e0O-gN-fgG" firstAttribute="top" secondItem="Sc7-c2-xrZ" secondAttribute="bottom" constant="8" id="rKR-zu-5Td"/>
-                            <constraint firstItem="L7P-s5-nJk" firstAttribute="top" secondItem="e0O-gN-fgG" secondAttribute="bottom" constant="25" id="t4X-Kr-5Ni"/>
+                            <constraint firstItem="e0O-gN-fgG" firstAttribute="top" secondItem="Sc7-c2-xrZ" secondAttribute="bottom" constant="3" id="rKR-zu-5Td"/>
+                            <constraint firstItem="IlH-Yk-6dk" firstAttribute="leading" secondItem="Y6y-Gj-jeg" secondAttribute="leading" id="rdF-fe-fmR"/>
                             <constraint firstItem="e0O-gN-fgG" firstAttribute="leading" secondItem="y6v-I1-Ne5" secondAttribute="leadingMargin" id="vN4-Jd-8Gg"/>
+                            <constraint firstItem="L7P-s5-nJk" firstAttribute="leading" secondItem="y6v-I1-Ne5" secondAttribute="leadingMargin" constant="21" id="vst-MZ-yYj"/>
                             <constraint firstItem="tLl-Hp-0rV" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="x70-aV-308"/>
-                            <constraint firstItem="Yor-IY-snI" firstAttribute="height" secondItem="L7P-s5-nJk" secondAttribute="height" id="xKG-uZ-hnF"/>
                             <constraint firstItem="e0O-gN-fgG" firstAttribute="centerX" secondItem="y6v-I1-Ne5" secondAttribute="centerX" id="xan-3O-YTm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Qontactr" id="GoJ-II-bsf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="BfI-9N-WW8">
+                            <connections>
+                                <action selector="savePhotoBarButton:" destination="f9f-Gk-aZn" id="xOg-zA-A53"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="settings" id="Ggz-Oe-YOb">
                             <connections>
                                 <action selector="profileSegueButton:" destination="f9f-Gk-aZn" id="Il3-55-YwO"/>
@@ -851,6 +850,7 @@
         <image name="instagramIcon" width="123" height="123"/>
         <image name="linkedinIcon" width="225" height="225"/>
         <image name="phoneIcon" width="225" height="225"/>
+        <image name="qontactrappicon" width="256" height="256"/>
         <image name="settings" width="25" height="25"/>
         <image name="twitterIcon" width="179" height="119"/>
         <image name="websiteIcon" width="225" height="225"/>

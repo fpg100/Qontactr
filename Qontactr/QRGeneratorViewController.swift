@@ -27,11 +27,10 @@ class QRGeneratorViewController: UIViewController, GADBannerViewDelegate {
     //bottom ad banner
     @IBOutlet var bannerView: GADBannerView!
     
-    //saves whatever image is on qrimage imageview after alert prompt
-    @IBAction func saveQRPhotoButton(sender: UIButton) {
+    @IBAction func savePhotoBarButton(sender: AnyObject) {
         saveQrPhotoToCameraRoll()
     }
-    
+
     func saveQrPhotoToCameraRoll() {
         let alertController = UIAlertController(title: "Save QR code to camera roll?", message:
             nil, preferredStyle: UIAlertControllerStyle.Alert)

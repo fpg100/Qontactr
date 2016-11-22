@@ -22,7 +22,7 @@ class Qard: NSObject, NSCoding {
     var instagram: String = ""
     var website: String = ""
     
-    var profileImage: UIImage = UIImage(named: "linkedinIcon")!
+    var profileImage: UIImage = UIImage(named: "qontactrappicon")!
     
     init(first: String){
         firstName = first
@@ -42,13 +42,6 @@ class Qard: NSObject, NSCoding {
     //NSCoding Stuff------------------------------------------------------
         //encoder
     func encodeWithCoder(coder: NSCoder) {
-        /*
-        coder.encodeObject(self.title, forKey: "title")
-        coder.encodeObject(self.author, forKey: "author")
-        coder.encodeInt(Int32(self.pageCount), forKey: "pageCount")
-        coder.encodeObject(self.categories, forKey: "categories")
-        coder.encodeBool(self.available, forKey: "available")
-        */
         
         //all the strings
         coder.encodeObject(firstName, forKey: "firstName")
@@ -208,7 +201,8 @@ class Qard: NSObject, NSCoding {
         return "http://facebook.com/\(facebook)"
     }
     func instagramLink() -> String {
-        return "http://instagram.com/\(instagram)"
+        return "instagram://user?username=\(instagram)"
+        //return "http://instagram.com/\(instagram)"
     }
     func websiteLink() -> String {
         if website.hasPrefix("http://") && website.hasPrefix("https://") {
