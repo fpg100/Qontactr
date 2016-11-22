@@ -46,7 +46,7 @@
                                             <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cND-Rs-es5"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="34O-Hp-7P2"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QontactrBanner" translatesAutoresizingMaskIntoConstraints="NO" id="34O-Hp-7P2"/>
                                 </subviews>
                                 <color key="backgroundColor" red="0.34004400620000003" green="0.4221766354" blue="0.99965822699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -632,7 +632,7 @@
                                     <constraint firstAttribute="height" constant="50" id="KRk-9K-krq"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-mQ-rsA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QontactrBanner" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-mQ-rsA">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="NBy-oa-SWC"/>
                                     <constraint firstAttribute="height" constant="50" id="rGN-nV-dhm"/>
@@ -762,21 +762,21 @@
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="fuV-10-4WB" detailTextLabel="c0H-zQ-3gs" style="IBUITableViewCellStyleSubtitle" id="D9B-Va-7qZ">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9B-Va-7qZ" id="R8J-HU-R7Q">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fuV-10-4WB">
-                                                    <frame key="frameInset" minX="164" minY="4" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c0H-zQ-3gs">
-                                                    <frame key="frameInset" minX="164" minY="25" width="41" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -845,6 +845,7 @@
     </scenes>
     <resources>
         <image name="DOGE" width="100" height="101"/>
+        <image name="QontactrBanner" width="640" height="100"/>
         <image name="emailIcon" width="204" height="204"/>
         <image name="facebookIcon" width="121" height="121"/>
         <image name="instagramIcon" width="123" height="123"/>
@@ -856,7 +857,7 @@
         <image name="whiteSquare" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1tX-As-P20"/>
-        <segue reference="AY0-Bu-xk1"/>
+        <segue reference="yOW-OH-fsZ"/>
+        <segue reference="CxN-9D-bEa"/>
     </inferredMetricsTieBreakers>
 </document>
